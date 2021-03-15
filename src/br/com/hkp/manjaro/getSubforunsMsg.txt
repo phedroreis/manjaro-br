@@ -1,0 +1,15 @@
+************************ GetSections by Pedro Reis *****************************
+*                                                                              *
+* Pode-se  parar o programa com CTRL + C. Porém o download ficaria incompleto. *
+*                                                                              *
+* Os arquivos obtidos  nesse download são  essenciais para construir uma cópia *
+* estática do fórum.                                                           *
+*                                                                              *
+*                                                                              *
+* Se for interrompido, este programa deve ser executado novamente para obter o *
+* download completo.                                                           *
+*                                                                              *
+* O download irá se iniciar dentro de alguns instantes...                      *
+*                                                                              *
+********************************************************************************
+

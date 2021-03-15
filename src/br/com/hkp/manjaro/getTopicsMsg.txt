@@ -1,0 +1,19 @@
+************************* GetTopics by Pedro Reis ******************************
+*                                                                              *
+* Pode-se  parar o programa com CTRL + C. Porém o download ficaria incompleto. *
+*                                                                              *
+* Para continuar de onde parou, anote o núm. do último tópico que estava sendo *
+* baixado quando o programa foi  abortado  e o  digite na linha de  comando na *
+* próxima vez que executar GetTopics.jar.                                      *
+*                                                                              *
+* Exemplo:                                                                     *
+*                                                                              *
+* Se a última linha foi https://www.manjaro-linux.com.br/forum/-t5947-10.html, *
+* então o tópico 5947 estava sendo baixado quando o programa foi interrompido. *
+*                                                                              *
+* Para retomar deste ponto digite java -jar GetTopics.jar 5947 quando executar *
+* novamente este programa.                                                     *
+*                                                                              *
+* O download irá se iniciar dentro de alguns instantes...                      *
+*                                                                              *
+********************************************************************************

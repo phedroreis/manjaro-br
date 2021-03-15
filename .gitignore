@@ -1,0 +1,13 @@
+/build/
+
+/dist/
+
+/manjaro-linux.com.br*/
+
+*.class
+
+
+*.7z
+
+
+
