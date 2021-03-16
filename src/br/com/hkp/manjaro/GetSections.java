@@ -142,7 +142,7 @@ public class GetSections
             
             System.out.println(PREFIX + "index.php\n");
             
-            String indexContent = readTextFile(DOWNLOAD_DIR + "/index.php");
+            String indexContent = readTextFile(DOWNLOAD_DIR + "/index.html");
             
             Matcher section = REG_SECTION.matcher(indexContent);
             

@@ -27,8 +27,8 @@ public class GetFiles
     
     private static final String PREFIX1 = "\\.";
     
-     private static final String PREFIX2 = 
-         "https?:\\/\\/(www\\.)?manjaro-linux\\.com\\.br";
+    private static final String PREFIX2 = 
+        "https?:\\/\\/(www\\.)?manjaro-linux\\.com\\.br";
     
     private static final String REGEXP =
         "((" + PREFIX1 + ")|(" + PREFIX2 + "))\\/.+";        
