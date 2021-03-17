@@ -397,7 +397,17 @@ public class Build
                         "href=\"manjaro-official/", 
                         "href=\"manjaro-official.html"
                     );
+                htmlContent = 
+                    htmlContent.replace
+                    (
+                        "<a href=\"manjaro-forumspage0.html\"", 
+                        "<a href=\"https://forum.manjaro.org/\""
+                    );
             }else if (filename.equals("manjaro-official.html"))
+            /*
+            O link na pagina de secao manjaro-official deve apontar para 
+            forum.manjaro.org
+            */
             {
                 htmlContent = 
                     htmlContent.replace
