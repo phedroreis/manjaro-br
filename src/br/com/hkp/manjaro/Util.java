@@ -325,17 +325,20 @@ public final class Util
     
     -------------------------------------------------------------------------*/
     /**
-     * Exibe informacoes iniciais no console ao se executar o programa.
+     * Le um arquivo txt empacotado no jar.
      * 
-     * @param filename O arquivo de onde eh lido o texto da mensagem.
+     * @param filename O nome do arquivo empacotado no jar.
+     * 
+     * @return O conteudo do arquivo.
      * 
      */
-    public static void showOpenMessage(final String filename) 
+    public static String getTxtResource(final String filename)
     {
+        StringBuilder sb = new StringBuilder();
         try
         {    
             InputStream in = 
-                new GetTopics().getClass().getResourceAsStream(filename); 
+                new Util().getClass().getResourceAsStream(filename); 
             
             BufferedReader reader = 
                 new BufferedReader
@@ -343,16 +346,30 @@ public final class Util
                         new InputStreamReader(in, StandardCharsets.UTF_8)
                     );
             
-          
             String line;
             while ((line = reader.readLine()) != null) 
-                System.out.println(black + whiteBackground + line + defaultColor);
-            System.out.println();
+                sb.append(line).append("\n");
+            sb.append("\n");
         }
         catch (IOException e) {}
-    }//showOpenMessage()
+        
+        return sb.toString();
+    }//getTxtResource()
     
     /*[11]---------------------------------------------------------------------
+    
+    -------------------------------------------------------------------------*/
+    /**
+     * Exibe informacoes iniciais no console ao se executar o programa.
+     * 
+     * @param filename O arquivo de onde eh lido o texto da mensagem.
+     */
+    public static void showOpenMessage(final String filename) 
+    {
+        System.out.println(getTxtResource(filename));
+    }//showOpenMessage()
+    
+    /*[12]---------------------------------------------------------------------
     
     -------------------------------------------------------------------------*/
     /**
@@ -365,7 +382,7 @@ public final class Util
         System.err.print(red + err + defaultColor);
     }//systemErrPrint()
     
-    /*[12]---------------------------------------------------------------------
+    /*[13]---------------------------------------------------------------------
     
     -------------------------------------------------------------------------*/
     /**
@@ -379,7 +396,7 @@ public final class Util
         System.err.println(red + err + defaultColor);
     }//SystemErrPrintln()
     
-    /*[13]---------------------------------------------------------------------
+    /*[14]---------------------------------------------------------------------
     
     -------------------------------------------------------------------------*/
     /**
@@ -410,7 +427,7 @@ public final class Util
         }//if-else
     }//setTerminalColors()
     
-    /*[14]---------------------------------------------------------------------
+    /*[15]---------------------------------------------------------------------
     
     -------------------------------------------------------------------------*/
     public static boolean downloadUrlMakingDirs(final String url)
@@ -493,6 +510,11 @@ public final class Util
             return filename.endsWith(".html");
         }//accetp()
     }//classe HtmlFilter
+    
+    public static void main(String[] args)
+    {
+        showOpenMessage("getTopicsMsg.txt");
+    }
     
  }//classe Util
 

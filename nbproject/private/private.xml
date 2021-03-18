@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/GetSections.java</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/GetArticles.java</file>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/GetTopics.java</file>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/GetFiles.java</file>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/getSectionsMsg.txt</file>
@@ -12,6 +13,7 @@
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/Util.java</file>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/getTopicsMsg.txt</file>
             <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/GetSubforuns.java</file>
+            <file>file:/home/userhugo/Desenvolvimento/Java/NetBeansProjects/manjaro-br/src/br/com/hkp/manjaro/BuildTable.java</file>
         </group>
     </open-files>
 </project-private>
