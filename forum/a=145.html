@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-br" xml:lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="pt-br" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>Manjaro Brasil &bull; Ver artigo - Pacman e pamac: uma comparação na manipulação de pacotes</title>
+
+
+
+
+<link href="styles/we_clearblue/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="images/jgrowl/jgrowl_v.css" />
+
+
+
+<link rel="alternate" type="application/atom+xml" title="feeds - Manjaro Brasil" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Notícias" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Todos os fóruns" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Novos tópicos" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Tópicos ativos" href="default.html" />
+
+
+
+
+
+<style>
+#toTop {
+   width:90px;
+    #border:1px solid #ccc;
+    background:#16a085;
+    text-align:center;
+    padding:5px;
+   position:fixed; /* this is the magic */
+    bottom:10px; /* together with this to put the div at the bottom*/
+    right:14px;
+    cursor:pointer;
+    display:none;
+    color:#fdfdfd;
+    font-family:"Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size:11px;
+}
+
+#main-navigation #searchbox {
+	background: url("styles/we_clearblue/theme/images/navbar_search.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 30px;
+	margin-left: 10px;
+    margin-top: 8px;
+    position: static;
+    width: 150px;
+	border-left: 1px solid transparent;
+}
+
+#main-navigation #searchbox fieldset {
+    border: medium none;
+    padding-top: 6px;
+}
+
+#main-navigation #searchbox input {
+    background-color: transparent !important;
+    background-image: url("styles/we_clearblue/theme/images/search_back.gif");
+    background-repeat: no-repeat;
+    border: medium none !important;
+    font-size: 1.1em !important;
+    height: 19px !important;
+    margin-left: 10px;
+    padding-top: 0;
+    width: 125px;
+}
+</style>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="all" href="styles/abbcode/abbcode.css?3.0.12" />
+
+
+
+<style type="text/css">.attach-image img { border: 0; }</style>
+
+</head>
+<body id="phpbb" class="section-kb ltr">
+<div id="wrapper">
+<div id="header">
+<div id="account">
+<ul class="leftside">
+<li>Bem-vindo: 18 Mar 2021, 04:18</li>
+</ul>
+<ul class="rightside">
+<li><a href="default.html" title="Registrar">Registrar</a></li>
+<li><a href="default.html" title="Entrar" accesskey="l">Entrar</a></li>
+</ul>
+</div>
+<a href="portal.html" title="Manjaro Brasil">
+<div id="illustration">
+<div id="site-description"><img src="images/manjaro_logo.png" alt="logo">
+<p></p>
+</div>
+</div>
+</a>
+<div class="top_box">
+<h1 class="titulo">Download aqui</h1>
+<div class="bloco">
+<h4><a href=" https://manjaro.org/get-manjaro/" title="Manjaro Linux 17.1.8" target="_blank"><img src="styles/we_clearblue/theme/images/link_icon.png" alt="Manjaro Linux 17.1.8" />&nbsp; Manjaro Linux 17.1.8</a></h4>
+<span class="date">16 ABR 18</span>
+</div>
+</div>
+<center>
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
+<div id="main-navigation">
+<ul id="primary-navigation" class="leftside">
+<li><a href="portal.html" title="Portal">Portal</a></li>
+<li><a href="index.html" title="Fóruns">Fóruns</a></li>
+<li><a href="default.html" title="Regras" style="color: #34495E">Regras</a></li>
+<li><a href="https://webchat.freenode.net/?channels=manjaro-br" target="_blank" title="IRC">IRC</a></li>
+<li><a href="https://pastebin.com/" target="_blank" title="Paste">Paste</a></li>
+<li><a href="kb.html" title="Knowledge Base">Knowledge Base</a></li>
+<li><a href="moonmoon/index.html" target="_blank" title="Manjaro Brasil planet">Manjaro Brasil planet</a></li>
+<li id="searchbox">
+<fieldset>
+<form method="get" action="pesquisar.php">
+<p>
+<input name="q" id="q" type="search" size="40" value="Buscar com Google" onclick="if(this.value=='Buscar com Google')this.value='';" onblur="if(this.value=='')this.value='Buscar com Google';" />
+</p>
+</form>
+</fieldset>
+</li>
+</ul>
+</div>
+</td></tr></tbody>
+</table>
+</center>
+</div>
+<div id="container">
+<table style="width: 100%">
+<tr>
+<td id="left_menu" style="width: 180px; vertical-align: top;">
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Autor <a href="kb.html"><img src="styles/we_clearblue/theme/images/feed.gif" width="14" height="14" alt="Subscrever este autor" title="Subscrever este autor" /></a></div>
+<dl class="user_menu">
+<dt>
+<a href="default.html"><img src="download/2087_1470101327.jpg" width="128" height="128" alt="Avatar do usuário" /></a><br />
+<a href="default.html" style="color: #00AAD4;" class="username-coloured">Daniel Dutra</a>
+</dt>
+<dd>Membro<br /><img src="images/ranks/rank_2.png" alt="Membro" title="Membro" /></dd>
+<dd>&nbsp;</dd>
+<dd><strong>Artigos:</strong> <a href="kb.html" title="Artigos do mesmo autor">3</a></dd><dd><strong>Registro:</strong> 01 Ago 2016, 21:25</dd>
+<dd><strong>Distro utilizada:</strong> Manjaro</dd>
+<dd><strong>Versão:</strong> 16.06.1 Daniella- 16.08 Ellada</dd>
+<dd><strong>Ambiente:</strong> XFCE</dd>
+<dd><strong>Repositório:</strong> Stable</dd>
+<dd><strong>Habilidade:</strong> Novice</dd>
+</dl>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Pesquisar artigos</div>
+<form id="kb_searchform" method="post" action="kb.html?i=search&amp;cat_ids[]=8">
+<fieldset>
+<input name="q" id="kb_keywords" type="text" style="width: 128px" maxlength="128" title="Pesquisar por palavras-chaves" class="inputbox search" value="Pesquisar…" onclick="if(this.value=='Pesquisar…')this.value='';" onblur="if(this.value=='')this.value='Pesquisar…';" />
+<input class="button2" value="Pesquisa" type="submit" /><br />
+</fieldset>
+</form>
+ <span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Exportar artigo</div>
+<div style="padding-bottom: 3px;" class="user_menu">
+<div><a href="kb.html" title="Exportar para word"><img src="styles/we_clearblue/theme/images/word.jpg" width="14" height="14" alt="Exportar para word" title="Exportar para word" /> Exportar para word</a></div>
+</div>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Compartilhar em</div>
+<div style="padding-bottom: 3px;">
+<div>
+<ul class="linklist">
+</ul>
+<strong></strong>
+<div class="addthis_toolbox">
+<div class="custom_images">
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;amp;s=blogger&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/blogger.png" width="24" height="24" alt="Blogger" title="Blogger " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=delicious&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/delicious.png" width="24" height="24" alt="Delicioso" title="Delicioso " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=digg&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/digg.png" width="24" height="24" alt="Digg" title="Digg " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=facebook&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/facebook.png" width="24" height="24" alt="Facebook" title="Facebook " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=friendfeed&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/friendfeed.png" width="24" height="24" alt="Feed amigo" title="Feed amigo " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=google&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/Google.png" width="24" height="24" alt="Google" title="Google " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=linkedin&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/linkedin.png" width="24" height="24" alt="Linked In" title="Linked In " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=live&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/live.png" width="24" height="24" alt="Live" title="Live " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=mixx&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/mixx.png" width="24" height="24" alt="Mixx" title="Mixx " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=myspace&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/myspace.png" width="24" height="24" alt="MySpace" title="MySpace " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=netvibes&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/netvibes.png" width="24" height="24" alt="Netvibes" title="Netvibes " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=reddit&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/reddit.png" width="24" height="24" alt="Reddit" title="Reddit " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=stumbleupon&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/stumbleupon.png" width="24" height="24" alt="Stumble Upon" title="Stumble Upon " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=technorati&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/technorati.png" width="24" height="24" alt="Technorati" title="Technorati " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=twitter&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/twitter.png" width="24" height="24" alt="Twitter" title="Twitter " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=wordpress&amp;url=kb.html?a=145&amp;title=Pacman e pamac: uma comparação na manipulação de pacotes&amp;content=O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona."><img src="styles/we_clearblue/theme/images/social_bookmarking/wordpress.png" width="24" height="24" alt="Wordpress" title="Wordpress " /></a>
+</div>
+</div>
+</div>
+</div>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+</td>
+<td style="vertical-align: top; padding-left: 10px;">&nbsp;
+<div id="a" class="post bg1">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="postbody" style="width: 100%;">
+<ul class="profile-icons">
+<li class="info-icon"><a href="kb.html" title="Ver histórico do artigo"><span>Ver histórico do artigo</span></a></li>
+</ul>
+<h3 class="first"><a href="	">Pacman e pamac: uma comparação na manipulação de pacotes</a></h3>
+<strong>ID do artigo:</strong> 145<br />
+<strong>Adaptado por:</strong> <a href="default.html" style="color: #00AAD4;" class="username-coloured">Daniel Dutra</a><br />
+<strong>Adaptado em:</strong> 05 Ago 2016, 12:19<br />
+<strong>Descrição do artigo:</strong> O objetivo do artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona.<br />
+<div class="content">
+<dl class="codebox">
+<dt>Link externo para este artigo:</dt>
+<dd>
+<code>kb.html?a=145</code>
+</dd>
+</dl>
+</div>
+<hr />
+<div class="pagination">
+</div>
+<div class="content" style="text-align: justify;"><img src="http://wstaw.org/m/2016/08/05/pacman.jpg" alt="Imagem" class="resize_me" /><br /><br />O meu intuito com esse artigo é apenas passar uma visão de como o processo de manipulação dos pacotes funciona e não difere muito, independentemente se for utilizado pela linha de comando com o <span style="text-decoration: underline">pacman</span> ou por uma interface gráfica como o <span style="text-decoration: underline">Pamac</span> e com isso quero ajudar outros usuários iniciantes (principalmente eu) a perderem um pouco o receio com a linha de comando. Por isso o objetivo desse artigo é apenas fazer comparações de como realizar os mesmos processos utilizando ferramentas diferentes.<br /><br />Para isso vou utilizar três ferramentas:<br /><br />1 - <span style="text-decoration: underline">pacman</span> o gerenciador de pacotes e principal ferramenta de manipulação dos arquivos e softwares do Manjaro (e do Arch).<br />2 - <span style="text-decoration: underline">Pamac-manage</span>r a interface gráfica desenvolvida para realizar as mesmas funções basicas que o pacman só que através do modo gráfico.<br />3 - <a href="https://www.archlinux.org/packages/" onclick="window.open(this.href);return false;" class="postlink">O site de pacotes e repositórios do Arch linux</a> - Vamos utiliza-lo apenas para fazer comparações e verificar informações de pacotes já que ele é compatível com o Manjaro.<br /><br />Como citei sou iniciante e sou sujeito a muitas falhas, peço que se forem encontrados alguns erros, por favor me corrijam para que eu possa aprender com esses erros.<br /><br />Para criação desse artigo estou utilizando o Manjaro XFCE 16.06.1 Daniella<br /><br /><span style="font-weight: bold">Mão na massa</span><br /><br />Primeiramente vamos abrir as ferramentas. Abra o <a href="https://www.archlinux.org/packages/" onclick="window.open(this.href);return false;" class="postlink">O site de pacotes e repositórios do Arch linux</a> em seguida o <span style="text-decoration: underline">terminal </span>e por fim o <span style="text-decoration: underline">Pamac-manager</span>.<br /><br />Para encontrar o pamac-manager basta clicar no Menu Aplicações (Iniciar) e digitar na barra de pesquisas: pamac-manager. Você pode clicar tanto em Execução pamac-manager como em Adicionar/Remover Programas.<br /><br /><img src="https://i.imgur.com/cxqi3M0.png" alt="Imagem" class="resize_me" /><br /><br /><span style="text-decoration: underline">1 - Sincronizando os Repositórios</span><br /><br />1.1 - No terminal digite <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">sudo pacman -Sy</code> para sincronizar os repositórios e atualiza-los.<br />1.2 - No pamac clique no seguinte ícone <img src="https://i.imgur.com/gPC83OH.png" alt="Imagem" class="resize_me" /> e em seguida em Atualizar banco de dados.<br /><br />Pronto o banco de dados dos repositórios estão atualizados e prontos para uso.<br /><br /><span style="text-decoration: underline">2 - Verificando a quantidade de pacotes instalados no seu sistema.</span><br /><br />2.1 - No terminal digite o seguinte comando <br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>pacman -Q|wc -l</code></dd></dl> <br /><br />ele irá mostrar a quantia de pacotes instados no seu Manjaro através dos repositórios oficiais. <br /><br />Em seguida digite <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">pacman -Q</code> para apresentar uma lista de todos os pacotes instalados no seu Manjaro.<br /><br />2.2 - Agora no Pamac clique na aba superior cujo o nome é Estado e clique na opção Instalado <br /><br /><img src="https://i.imgur.com/Q3nJENx.png" alt="Imagem" class="resize_me" /><br /><br />Perceba que no terminal após você ter digitado o comando <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">pacman -Q</code> apareceu <span style="text-decoration: underline">a mesma lista idêntica a gerada no pamac</span>. Veja também que no terminal na frente do nome do pacote possui números e eles significam a versão do pacote. <br />No pamac aparece de uma forma um pouco mais detalhada e separada por abas que são elas (Estado, Nome, Versão, Repositório e Tamanho) por esse lado as informações detalhadas no pamac parecem estar mais organizadas e mais completas.<br /><br /><img src="https://i.imgur.com/RmhvFM7.png" alt="Imagem" class="resize_me" /><br /><br />No <a href="https://www.archlinux.org/packages" onclick="window.open(this.href);return false;" class="postlink">site</a> dos pacotes é possível visualizar as mesmas informações e até mais completas. Basta procurar pelo nome do pacote que você deseja e selecionar a arquitetura do sistema e o repositório (caso você saiba):<br /><br /><img src="https://i.imgur.com/BFMQMQw.png" alt="Imagem" class="resize_me" /><br /><br />No pamac a informação do repositório que determinado pacote pertence é bem visível. Para verificar isso no terminal digite <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">pacman -Si NOME-DO-PACOTE</code> no meu caso vou usar como exemplo o navegador Firefox que vem instalado por padrão no Manjaro com XFCE (imagino que no seu também). <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">pacman -Si firefox</code>:<br /><br /><img src="https://i.imgur.com/qUPC4Gn.png" alt="Imagem" class="resize_me" /><br /><br />Perceba que com esse comando do pacman apareceram informações extras sobre o pacote e você também pode visualizar elas no pamac e no site basta clicar sobre o nome do pacote:<br /> <br /><img src="https://i.imgur.com/KniA0Lj.png" alt="Imagem" class="resize_me" /><br /><br />2.3 - Verifique os arquivos que serão instalados (ou estão instalados) no pacote com o comando<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>pacman -Ql NOME-DO-PACOTE</code></dd></dl> <br /><br />e no site clicando na opção <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">View the file list for pacote</code>:<br /><br /><img src="https://i.imgur.com/6EbsfAm.png" alt="Imagem" class="resize_me" /><br /><br />Caso você queira conferir se o pacote que você instalou colocou os arquivos nas respectivas pastas indicadas pelo comando é só você abrir o gerenciador de arquivos (no meu caso o Thunar) e verificar pasta por pasta (da um grande trabalho mais funciona)<br /><br />3 -<span style="text-decoration: underline"><code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">pacman -Ss | grep nome-do-repositorio/</code> = lista todos os pacotes disponíveis no repositório indicado e especifica se está instalado ou não.</span><br /><br />3.1 - No terminal digite <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">pacman -Ss | grep extra/</code> para acessar o repositório extra/ e ele irá mostrar todos os pacotes disponíveis no repositórios sejam eles instalados no seu sistema ou se não estiverem. Ele especifica os pacotes instalados com [instalado]<br /><br /><img src="https://i.imgur.com/VU69zcS.png" alt="Imagem" class="resize_me" /><br /><br />Caso você queira saber informações sobre um pacote especifico digite <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">pacman -Si nome-do-pacote</code><br /><br />Caso você saiba o nome do pacote que deseja e queira procurar em todos os repositórios basta digitar <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">pacman -Ss pacote</code>.<br /><br />3.2 - Agora vamos no <a href="https://www.archlinux.org/packages/" onclick="window.open(this.href);return false;" class="postlink">site</a> selecionamos a arquitetura e o repositório (de sua preferencia) e clique em search. No meu caso vou utilizar o repositório extra.<br /><br /><img src="https://i.imgur.com/UDqQyWF.png" alt="Imagem" class="resize_me" /><br /><br />No site pelo que podemos notar diz que atualmente existem 2203 pacotes no repositório extra e eles são exatamente os mesmos apresentados no terminal como podemos ver abaixo:<br /><br /><img src="https://i.imgur.com/du9Lj10.png" alt="Imagem" class="resize_me" /><br /><br />Nesse caso a vantagem do terminal em relação ao site é que ele especifica quais os pacotes já estão instalados.<br /><br />3.3 - No pamac selecione a aba Repositórios e clique no nome do repositório de sua preferencia. <br /><br /><img src="https://i.imgur.com/ZK7gRCc.png" alt="Imagem" class="resize_me" /><br /><br />O que eu quero demonstrar com isso é que as três ferramentas irão apresentar os mesmos pacotes disponíveis. Quando um pacote está instalado através do pamac ele apresenta um ícone verde na categoria Estado especificando que está instalado:<br /><br /><img src="https://i.imgur.com/bhhzvMC.png" alt="Imagem" class="resize_me" /><br /><br /><span style="font-weight: bold">Demonstrando a instalação de um programa</span><br /><br />Para finalizar vou demonstrar a instalação de um programa através dos três métodos (pacman, pamac e <a href="https://www.archlinux.org/packages/" onclick="window.open(this.href);return false;" class="postlink">site</a>) o programa para esse exemplo que irei baixar é gedit um editor de texto simples.<br /><br /><span style="text-decoration: underline">1 - Terminal </span><br /><br />Primeiro vamos verificar se o pacote está disponível nos repositórios através do comando:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>pacman -Ss gedit</code></dd></dl><br /><br />Após encontrar o pacote digite o comando <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">sudo pacman -S gedit</code> para baixar o pacote.<br /><br /><img src="https://i.imgur.com/iH6tVV0.png" alt="Imagem" class="resize_me" /><br /><br /><span style="text-decoration: underline">2 - Pamac-manager</span><br /><br />Agora iremos utilizar o pamac para isso basta pesquisar na caixa de busca com o nome do programa. Clique na aba Procurar e pesquise por gedit. Você verá que ira aparecer a mesma quantidade de pacotes que no terminal. Clique com o botão direito no pacote e selecione instalar.<br /><br /><img src="https://i.imgur.com/w5p0gwy.png" alt="Imagem" class="resize_me" /><br /><br /><span style="text-decoration: underline">3 - <a href="https://www.archlinux.org/packages/" onclick="window.open(this.href);return false;" class="postlink">O site de pacotes e repositórios do Arch linux</a></span><br /><br />Entre no site e pesquise pelo gedit e clique no programa respectivo a sua arquitetura. Na tela que aparecer com a descrição do programa clique em <span style="text-decoration: underline">Download From Mirror</span>.<br /><br /><img src="https://i.imgur.com/fShsYyF.png" alt="Imagem" class="resize_me" /><br /><br />Com certeza o pacote baixado irá para a pasta Downloads na home do seu usuario. <br /><br />Basta no terminal você digitar <dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>cd Downloads/</code></dd></dl><br /><br />e depois <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">ls</code> para listar e apresentar os arquivos na pasta.<br /><br /><img src="https://i.imgur.com/tyWb8PI.png" alt="Imagem" class="resize_me" /><br /><br />Agora basta você digitar <dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>sudo pacman -U nome-do-pacote-.pkg.tar.xz</code></dd></dl> no meu caso <br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>sudo pacman -U gedit-3.20.2-1-x86_64.pkg.tar.xz</code></dd></dl> <br /><br />ele irá pedir para confirmar a instalação, basta digitar S,<br /><br />Ou você pode fazer através do pamac. Após baixar o arquivo do site entre no pamac e clique no ícone <img src="https://i.imgur.com/vp5uU7S.png" alt="Imagem" class="resize_me" /> e em seguida<span style="text-decoration: underline"> Instalar pacotes locais</span> selecione o pacote que deseja instalar e clique em Abrir e em seguida commit para instalar o pacote. <br /><br /><img src="https://i.imgur.com/g3ZAzdG.png" alt="Imagem" class="resize_me" /><br /><br /><span style="font-weight: bold">Fim</span><br /><br />Os comandos utilizados nesse artigo foram retirados dos três excelentes artigos criado pelo fundador Holmes e que podem ser visitados abaixo:<br /><br /><a href="default.html" onclick="window.open(this.href);return false;" class="postlink">1- Pacman, comandos básicos no Manjaro</a><br /><a href="-t2953.html" onclick="window.open(this.href);return false;" class="postlink">2- Um pacotaço de comandos para seu dia-a-dia</a><br /><a href="-t3861.html" onclick="window.open(this.href);return false;" class="postlink">3- Pacotes instalados - quanto tem seu Manjaro?</a><br /><br />O que eu fiz foi apenas mostrar a utilização desses comandos na pratica e mostrar alternativas para realizar as mesmas tarefas usando métodos diferentes.<br /><br /><span style="font-weight: bold">Referência</span><br /><br />Os créditos por este texto são para Daniel Dutra.<br /><br /><span style="font-weight: bold">Mudanças</span><br /><br />- Holmes, 05/08/2016, inserção do texto.<br />- Holmes, 05/08/2016, correções pontuais.<br />- Holmes, 05/08/2016, ajustes no título.<br /><br /><p><b><font size="1" color="#000000">Conteúdo distribuído sob a licença GNU FDL</font></b></p></div>
+<strong></strong>
+<div class="notice">Este artigo foi <a href="kb.html">editado</a> por <a href="default.html" style="color: #803300;" class="username-coloured">Holmes</a> em 05 Ago 2016, 18:45<br />Razão: ajustes no título</div>
+<br />
+<div id="sig" class="signature"><strong>Tags:</strong> <a href="kb.html">pacman</a>, <a href="kb.html">pamac</a>, <a href="kb.html">configuração</a></div>
+</div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+<center>
+<div id="footer">
+<div id="footer-inner">
+<div>
+<p>Produzido por: <a href="https://www.phpbb.com/" onclick="window.open(this.href);return false;">phpBB</a> &reg; Forum Software &copy; phpBB Group</p>
+<p>Produzido por: MOD Knowledge Base &copy; <a href="http://kb.softphp.dk" onclick="window.open(this.href);return false;">Softphp</a><br />Traduzido por: <a href="http://www.suportephpbb.com.br">Suporte phpBB</a><br /><a href="http://www.phpbb-seo.com/" title="Search Engine Optimization"><img src="images/phpbb-seo.png" alt="phpBB SEO" /></a></p>
+<br />
+<p>Hospedagem cedida por: Igor Isaias Banlian</p>
+<p>O Manjaro Brasil usa o estilo desenvolvido por <a href="http://weeb.pl/" onclick="window.open(this.href);return false;">weeb</a> e modificado por Holmes e Freax</p>
+<p>Todo conteúdo do Manjaro Brasil está licenciado pela <a href="https://www.gnu.org/licenses/fdl.html">licença GNU FDL</a></p>
+</div>
+</div>
+<div id="footer-fixed"></div>
+</div>
+</center>
+</div>
+<div>
+<a id="bottom" name="bottom" accesskey="z"></a>
+</div>
+<div id="toTop">^ Voltar ao Topo</div>
+
+</body>
+</html>

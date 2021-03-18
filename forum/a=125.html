@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-br" xml:lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="pt-br" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>Manjaro Brasil &bull; Ver artigo - Servidor Web local com Xampp em seu Manjaro</title>
+
+
+
+
+<link href="styles/we_clearblue/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="images/jgrowl/jgrowl_v.css" />
+
+
+
+<link rel="alternate" type="application/atom+xml" title="feeds - Manjaro Brasil" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Notícias" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Todos os fóruns" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Novos tópicos" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Tópicos ativos" href="default.html" />
+
+
+
+
+
+<style>
+#toTop {
+   width:90px;
+    #border:1px solid #ccc;
+    background:#16a085;
+    text-align:center;
+    padding:5px;
+   position:fixed; /* this is the magic */
+    bottom:10px; /* together with this to put the div at the bottom*/
+    right:14px;
+    cursor:pointer;
+    display:none;
+    color:#fdfdfd;
+    font-family:"Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size:11px;
+}
+
+#main-navigation #searchbox {
+	background: url("styles/we_clearblue/theme/images/navbar_search.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 30px;
+	margin-left: 10px;
+    margin-top: 8px;
+    position: static;
+    width: 150px;
+	border-left: 1px solid transparent;
+}
+
+#main-navigation #searchbox fieldset {
+    border: medium none;
+    padding-top: 6px;
+}
+
+#main-navigation #searchbox input {
+    background-color: transparent !important;
+    background-image: url("styles/we_clearblue/theme/images/search_back.gif");
+    background-repeat: no-repeat;
+    border: medium none !important;
+    font-size: 1.1em !important;
+    height: 19px !important;
+    margin-left: 10px;
+    padding-top: 0;
+    width: 125px;
+}
+</style>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="all" href="styles/abbcode/abbcode.css?3.0.12" />
+
+
+
+<style type="text/css">.attach-image img { border: 0; }</style>
+
+</head>
+<body id="phpbb" class="section-kb ltr">
+<div id="wrapper">
+<div id="header">
+<div id="account">
+<ul class="leftside">
+<li>Bem-vindo: 18 Mar 2021, 04:18</li>
+</ul>
+<ul class="rightside">
+<li><a href="default.html" title="Registrar">Registrar</a></li>
+<li><a href="default.html" title="Entrar" accesskey="l">Entrar</a></li>
+</ul>
+</div>
+<a href="portal.html" title="Manjaro Brasil">
+<div id="illustration">
+<div id="site-description"><img src="images/manjaro_logo.png" alt="logo">
+<p></p>
+</div>
+</div>
+</a>
+<div class="top_box">
+<h1 class="titulo">Download aqui</h1>
+<div class="bloco">
+<h4><a href=" https://manjaro.org/get-manjaro/" title="Manjaro Linux 17.1.8" target="_blank"><img src="styles/we_clearblue/theme/images/link_icon.png" alt="Manjaro Linux 17.1.8" />&nbsp; Manjaro Linux 17.1.8</a></h4>
+<span class="date">16 ABR 18</span>
+</div>
+</div>
+<center>
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
+<div id="main-navigation">
+<ul id="primary-navigation" class="leftside">
+<li><a href="portal.html" title="Portal">Portal</a></li>
+<li><a href="index.html" title="Fóruns">Fóruns</a></li>
+<li><a href="default.html" title="Regras" style="color: #34495E">Regras</a></li>
+<li><a href="https://webchat.freenode.net/?channels=manjaro-br" target="_blank" title="IRC">IRC</a></li>
+<li><a href="https://pastebin.com/" target="_blank" title="Paste">Paste</a></li>
+<li><a href="kb.html" title="Knowledge Base">Knowledge Base</a></li>
+<li><a href="moonmoon/index.html" target="_blank" title="Manjaro Brasil planet">Manjaro Brasil planet</a></li>
+<li id="searchbox">
+<fieldset>
+<form method="get" action="pesquisar.php">
+<p>
+<input name="q" id="q" type="search" size="40" value="Buscar com Google" onclick="if(this.value=='Buscar com Google')this.value='';" onblur="if(this.value=='')this.value='Buscar com Google';" />
+</p>
+</form>
+</fieldset>
+</li>
+</ul>
+</div>
+</td></tr></tbody>
+</table>
+</center>
+</div>
+<div id="container">
+<table style="width: 100%">
+<tr>
+<td id="left_menu" style="width: 180px; vertical-align: top;">
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Autor <a href="kb.html"><img src="styles/we_clearblue/theme/images/feed.gif" width="14" height="14" alt="Subscrever este autor" title="Subscrever este autor" /></a></div>
+<dl class="user_menu">
+<dt>
+<a href="default.html"><img src="download/1174_1433831973.png" width="128" height="128" alt="Avatar do usuário" /></a><br />
+<a href="default.html" style="color: #00AAD4;" class="username-coloured">pactux</a>
+</dt>
+<dd>Aprendiz<br /><img src="images/ranks/rank_1.png" alt="Aprendiz" title="Aprendiz" /></dd>
+<dd>&nbsp;</dd>
+<dd><strong>Artigos:</strong> <a href="kb.html" title="Artigos do mesmo autor">5</a></dd><dd><strong>Registro:</strong> 09 Jun 2015, 02:55</dd>
+<dd><strong>Distro utilizada:</strong> Manjaro Linux</dd>
+<dd><strong>Versão:</strong> 17.1.8</dd>
+<dd><strong>Ambiente:</strong> Gnome</dd>
+<dd><strong>Repositório:</strong> Stable</dd>
+<dd><strong>Habilidade:</strong> Novice</dd>
+</dl>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Pesquisar artigos</div>
+<form id="kb_searchform" method="post" action="kb.html?i=search&amp;cat_ids[]=4">
+<fieldset>
+<input name="q" id="kb_keywords" type="text" style="width: 128px" maxlength="128" title="Pesquisar por palavras-chaves" class="inputbox search" value="Pesquisar…" onclick="if(this.value=='Pesquisar…')this.value='';" onblur="if(this.value=='')this.value='Pesquisar…';" />
+<input class="button2" value="Pesquisa" type="submit" /><br />
+</fieldset>
+</form>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Exportar artigo</div>
+<div style="padding-bottom: 3px;" class="user_menu">
+<div><a href="kb.html" title="Exportar para word"><img src="styles/we_clearblue/theme/images/word.jpg" width="14" height="14" alt="Exportar para word" title="Exportar para word" /> Exportar para word</a></div>
+</div>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Compartilhar em</div>
+<div style="padding-bottom: 3px;">
+<div>
+<ul class="linklist">
+</ul>
+<strong></strong>
+<div class="addthis_toolbox">
+<div class="custom_images">
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;amp;s=blogger&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/blogger.png" width="24" height="24" alt="Blogger" title="Blogger " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=delicious&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/delicious.png" width="24" height="24" alt="Delicioso" title="Delicioso " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=digg&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/digg.png" width="24" height="24" alt="Digg" title="Digg " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=facebook&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/facebook.png" width="24" height="24" alt="Facebook" title="Facebook " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=friendfeed&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/friendfeed.png" width="24" height="24" alt="Feed amigo" title="Feed amigo " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=google&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/Google.png" width="24" height="24" alt="Google" title="Google " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=linkedin&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/linkedin.png" width="24" height="24" alt="Linked In" title="Linked In " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=live&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/live.png" width="24" height="24" alt="Live" title="Live " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=mixx&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/mixx.png" width="24" height="24" alt="Mixx" title="Mixx " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=myspace&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/myspace.png" width="24" height="24" alt="MySpace" title="MySpace " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=netvibes&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/netvibes.png" width="24" height="24" alt="Netvibes" title="Netvibes " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=reddit&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/reddit.png" width="24" height="24" alt="Reddit" title="Reddit " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=stumbleupon&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/stumbleupon.png" width="24" height="24" alt="Stumble Upon" title="Stumble Upon " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=technorati&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/technorati.png" width="24" height="24" alt="Technorati" title="Technorati " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=twitter&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/twitter.png" width="24" height="24" alt="Twitter" title="Twitter " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=wordpress&amp;url=kb.html?a=125&amp;title=Servidor Web local com Xampp em seu Manjaro&amp;content=Neste texto será abordado o software para servidor Web local Xampp."><img src="styles/we_clearblue/theme/images/social_bookmarking/wordpress.png" width="24" height="24" alt="Wordpress" title="Wordpress " /></a>
+</div>
+</div>
+</div>
+</div>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+</td>
+<td style="vertical-align: top; padding-left: 10px;">&nbsp;
+<div id="a" class="post bg1">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="postbody" style="width: 100%;">
+<ul class="profile-icons">
+<li class="info-icon"><a href="kb.html" title="Ver histórico do artigo"><span>Ver histórico do artigo</span></a></li>
+</ul>
+<h3 class="first"><a href="	">Servidor Web local com Xampp em seu Manjaro</a></h3>
+<strong>ID do artigo:</strong> 125<br />
+<strong>Adaptado por:</strong> <a href="default.html" style="color: #00AAD4;" class="username-coloured">pactux</a><br />
+<strong>Adaptado em:</strong> 11 Jun 2015, 21:46<br />
+<strong>Descrição do artigo:</strong> Neste texto será abordado o software para servidor Web local Xampp.<br />
+<div class="content">
+<dl class="codebox">
+<dt>Link externo para este artigo:</dt>
+<dd>
+<code>kb.html?a=125</code>
+</dd>
+</dl>
+</div>
+<hr />
+<div class="pagination">
+</div>
+<div class="content" style="text-align: justify;"><img src="https://cdn.tutsplus.com/net/uploads/legacy/1066_bwtlphp/x.jpg" alt="Imagem" class="resize_me" /><br /><br />Para aqueles que desejam ter um Web Server no Manjaro Linux e não querem ter que instalar tudo no sistema operacional, aqui está uma ótima ferramenta para se conhecer e utilizar.<br /><br />O Xampp nada mais é do que um pacote baixado da internet, que vem com os recursos necessários para o funcionamento desse tipo de servidor. Nele há o Apache (ferramenta básica), o SGBD MySQL e as linguagens de programação Perl e PHP. Além disso, ele também trás uma ferramenta que facilita demais a vida, o phpMyAdmin, um software totalmente manipulado por interface gráfica para gerenciamento do MySQL e PHP, significando uma menor utilização do terminal (para felicidade de uns e tristeza de outros).<br /><br /><div style="width:100%"> <div style="font-style:italic; color: black;margin: 3px auto 0px auto; font-weight: bold; font-size: small; padding: 3px; background-color: #FFc6c6; border-left: 4px solid #DFDF00; border-top: 1px solid #FFFF99; border-right: 1px solid #FFFF99; color: #CC3300; border-top-color: #990000; border-right-color: #990000; border-left-color: #990000"> <img src="images/warnsmall.png" width="20" height="20" style="background-position: 0 50%;" alt="warning" />&nbsp;&nbsp;Atenção!</div> <div style="padding: 4px; background: #FEEBEF right bottom; border-left: 4px solid #DFDF00; border-right: 1px solid #FFFF99; border-bottom: 1px solid #FFFF99; margin: 0px auto 8px auto; background-position: right bottom; border-right-color: #990000; border-bottom-color: #990000; border-left-color: #990000;">O Xampp deve ser utilizado apenas para aplicações locais destinadas a testes, seu uso na World Wide Web não é recomendado, uma vez que ele não oferece a devida segurança para tanto.</div> </div><br /><br />Realizadas apresentações, vamos a parte divertida...<br /><br /><span style="font-weight: bold">- Obter o pacote necessário</span><br /><br />Antes de baixarmos o pacote, tenha em mente que esse software só poderá ser manipulado através do usuário <span style="font-weight: bold">root</span>, então antes de mais nada, abra o terminal e logue-se como super usuário:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ su<br /></code></dd></dl><br /><br />Já que estamos na linha de comandos, execute a seguinte instrução:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>wget -vc https://www.apachefriends.org/xampp-files/5.6.8/xampp-linux-5.6.8-0-installer.run<br /></code></dd></dl><br /><br /><span style="text-decoration: underline">Explicação:</span> Esse comando baixará o pacote na versão 5.6.8-0, caso essa URL não venha a funcionar, acesse o <a href="https://www.apachefriends.org/" onclick="window.open(this.href);return false;" class="postlink">site oficial do projeto</a> e baixe a versão para GNU/Linux.<br /><br /><span style="font-weight: bold">- Instalação</span><br /><br />Terminado de baixar o pacote, dê permissão de execução para ele (certifique-se de estar na mesma pasta do arquivo).<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># chmod +x xampp*<br /></code></dd></dl><br /><br />Em seguida execute-o:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># ./xampp*<br /></code></dd></dl><br /><br />O processo de instalação é realizado 100% por interface gráfica (é tão fácil que parece até o velho e conhecido sistema operacional das janelas), basta clicar em &quot;Next&quot; em todos os passos e após a execução do setup clicar em &quot;Finish&quot; e pronto, o Web Server está disponível para utilização.<br /><br /><span style="font-weight: bold">- Inicialização</span><br /><br />Ainda no terminal execute a instrução:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># /opt/lampp/lampp restart<br /></code></dd></dl><br /><br />Abra um navegador qualquer (Firefox, Chromium, etc) e acesse o endereço de loopback da máquina (também conhecido como <a class="postlink" href="http://127.0.0.1" onclick="window.open(this.href);return false;">http://127.0.0.1</a>) e você verá a tela de inicialização do Xampp, a partir disso escolha o idioma desejado e clique.<br /><br />Para paralizar o sistema utilize o comando:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># /opt/lampp/lampp stop<br /></code></dd></dl><br /><br />Para inicia-lo novamente:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># /opt/lampp/lampp start<br /></code></dd></dl><br /><br />Para reicinia-lo:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># /opt/lampp/lampp restart<br /></code></dd></dl><br /><br /><span style="font-weight: bold">- Hello World!</span><br /><br />Se até agora estava legal vai ficar melhor ainda, pois criaremos o primeiro código PHP no novo servidor :).<br /><br />Qualquer arquivo de código fonte que escrever (seja ele HTML, PHP, etc) deve ser armazenado no diretório <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">/opt/lampp/htdocs/</code> com isso o mesmo ficará disponível para acesso através do navegador. Sendo assim, vamos a criação da primeira página Web.<br /><br />Obs: Para fins de organização, primeiro crie uma pasta com o nome &quot;projetos&quot; dentro de <span style="font-weight: bold">htdocs</span>:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># mkdir /opt/lampp/htdocs/projetos<br /></code></dd></dl><br /><br />Em seguida, utilize o terminal para chamar seu editor de textos favorito (seja ele gráfico ou não), nesse caso utilizarei o gedit.<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># gedit &amp;<br /></code></dd></dl><br /><br />Com o editor aberto, escreva o código abaixo:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>&lt;?php<br /><br />&nbsp; &nbsp;echo &quot;&lt;h3&gt;Olá Mundo!&lt;/h3&gt;&quot;;<br /></code></dd></dl><br /><br />Agora salve o arquivo com o nome que desejar na pasta criada (<code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">/opt/lampp/htdocs/projetos</code>), apenas não esqueça de salva-lo com extensão .php. Abra uma nova aba no browser e acesse a URL <span style="font-weight: bold">http://127.0.0.1/projetos/nome_arquivo.php</span>, se tudo ocorreu de forma correta, você visualizará a página com a mensagem que escreveu.<br /><br />Nota: Observe que na URL declarei o nome da pasta &quot;projetos&quot;, e isso vale para qualquer diretório que for criado em <span style="font-weight: bold">htdocs</span>.<br /><br />Caso queira visualizar todas informações a respeito do PHP, substitua a linha do arquivo que contém &quot;echo&quot; por<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>phpinfo();<br /></code></dd></dl><br /><br />e dê um reaload na página (F5).<br /><br />Agora que falamos do PHP, vamos ao SGBD. Abra uma nova aba, acesse <span style="font-weight: bold">http://127.0.0.1/phpmyadmin</span> e verá a interface do MySQL pronta para ser usada, basta criar um banco de dados e começar a testar.<br /><br />Se você quiser ir além de alguns algoritmos em Perl/PHP e uma base de dados qualquer, o Xampp possuí uma grande vantagem: A possibilidade de se trabalhar com as principais ferramentas do mundo Web quando o assunto é conteúdo, seja a montagem de um blog, passando por ferramentas de aprendizagem virtual até chegar a um E-commerce. Me refiro a importantes softwares como Joomla!, Drupal, Moodle, etc.<br /><br />Para ter acesso a isso, acesse o endereço raiz da aplicação (<span style="font-weight: bold">http://127.0.0.1/</span>) e clique nos ícones presentes na seção &quot;Install applications on XAMPP using BitNami&quot;.<br /><br /><span style="font-weight: bold">- Segurança</span><br /><br />O Xampp possuí um modo de segurança que vem desabilitado por padrão. Ele permite que o acesso as páginas e ao SGBD seja autenticado por usuário e senha.<br /><br />Nota: Como esse é um software para uso em máquinas pessoais e para fins de teste, não vejo muitas vantagens na ativação desse recurso, mas já que estamos aqui vamos lá. Volte ao terminal e digite conforme abaixo:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># /opt/lampp/lampp security<br /></code></dd></dl><br /><br />O sistema lhe fará uma pergunta para criar a senha, responda com &quot;yes&quot; e a senha para acesso ao Xampp será pedida, após defini-la, será retornado para você o usuário criado e a confirmação da senha. A segunda pergunta é sobre o SGBD, nela há a informação de que o MySQL está disponível via rede e se você deseja desabilitar essa função, caso sim, escreva &quot;yes&quot; e o MySQL será reiniciado para concluir a operação. Feito isso, será requisitada uma senha para acesso ao phpMyAdmin como usuário &quot;pma&quot;, tecle &quot;yes&quot; e defina a senha. Depois será pedida uma senha para o usuário root, mesma coisa, tecle &quot;yes&quot; e crie a senha. Por fim, a senha de FTP também pedirá para ser criada, basta seguir os procedimentos citados anteriormente e o Xampp estará protegido em sua máquina.<br /><br /><span style="font-weight: bold">- Remoção</span><br /><br />Se por acaso você decidir que não quer mais o Xampp em seu sistema operacional, basta remove-lo.<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>rm -rvf /opt/lampp<br /></code></dd></dl><br /><br />Como nada foi instalado no computador (pois o Xampp é apenas um executável), não há com que se preocupar quanto a dependências do sistema, pois com a pasta excluída o Manjaro Linux nunca sentirá falta do que foi removido.<br /><br /><span style="font-weight: bold">- Conclusão</span><br /><br />Bom pessoal, esse foi mais um tutorial sobre uma das inúmeras ferramentas disponibilizadas aos usuários GNU/Linux, para mais informações, acesse a página oficial do projeto em (<a href="https://www.apachefriends.org/" onclick="window.open(this.href);return false;" class="postlink">https://www.apachefriends.org/</a>).<br /><br />Espero que esse texto possa ajudar alguém, e caso haja alguma informação errada ou incompleta, fiquem a vontade para comentar.<br /><br /><span style="font-weight: bold">Referência</span><br /><br />Os créditos por este texto são para pactux.<br /><br /><span style="font-weight: bold">Mudanças</span><br /><br />- Holmes, 11/06/2015, inserção do texto.<br /><br /><p><b><font size="1" color="#000000">Conteúdo distribuído sob a licença GNU FDL</font></b></p></div>
+<strong></strong>
+<div class="notice">Este artigo foi <a href="kb.html">editado</a> por <a href="default.html" style="color: #803300;" class="username-coloured">Holmes</a> em 11 Jun 2015, 21:48</div>
+<br />
+ </div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+<center>
+<div id="footer">
+<div id="footer-inner">
+<div>
+<p>Produzido por: <a href="https://www.phpbb.com/" onclick="window.open(this.href);return false;">phpBB</a> &reg; Forum Software &copy; phpBB Group</p>
+<p>Produzido por: MOD Knowledge Base &copy; <a href="http://kb.softphp.dk" onclick="window.open(this.href);return false;">Softphp</a><br />Traduzido por: <a href="http://www.suportephpbb.com.br">Suporte phpBB</a><br /><a href="http://www.phpbb-seo.com/" title="Search Engine Optimization"><img src="images/phpbb-seo.png" alt="phpBB SEO" /></a></p>
+<br />
+<p>Hospedagem cedida por: Igor Isaias Banlian</p>
+<p>O Manjaro Brasil usa o estilo desenvolvido por <a href="http://weeb.pl/" onclick="window.open(this.href);return false;">weeb</a> e modificado por Holmes e Freax</p>
+<p>Todo conteúdo do Manjaro Brasil está licenciado pela <a href="https://www.gnu.org/licenses/fdl.html">licença GNU FDL</a></p>
+</div>
+</div>
+<div id="footer-fixed"></div>
+</div>
+</center>
+</div>
+<div>
+<a id="bottom" name="bottom" accesskey="z"></a>
+</div>
+<div id="toTop">^ Voltar ao Topo</div>
+
+</body>
+</html>

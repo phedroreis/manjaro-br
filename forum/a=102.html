@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-br" xml:lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="pt-br" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>Manjaro Brasil &bull; Ver artigo - Capítulo 7. A sintaxe correta nos arquivos de configuração</title>
+
+
+
+
+<link href="styles/we_clearblue/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="images/jgrowl/jgrowl_v.css" />
+
+
+
+<link rel="alternate" type="application/atom+xml" title="feeds - Manjaro Brasil" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Notícias" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Todos os fóruns" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Novos tópicos" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Tópicos ativos" href="default.html" />
+
+
+
+
+
+<style>
+#toTop {
+   width:90px;
+    #border:1px solid #ccc;
+    background:#16a085;
+    text-align:center;
+    padding:5px;
+   position:fixed; /* this is the magic */
+    bottom:10px; /* together with this to put the div at the bottom*/
+    right:14px;
+    cursor:pointer;
+    display:none;
+    color:#fdfdfd;
+    font-family:"Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size:11px;
+}
+
+#main-navigation #searchbox {
+	background: url("styles/we_clearblue/theme/images/navbar_search.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 30px;
+	margin-left: 10px;
+    margin-top: 8px;
+    position: static;
+    width: 150px;
+	border-left: 1px solid transparent;
+}
+
+#main-navigation #searchbox fieldset {
+    border: medium none;
+    padding-top: 6px;
+}
+
+#main-navigation #searchbox input {
+    background-color: transparent !important;
+    background-image: url("styles/we_clearblue/theme/images/search_back.gif");
+    background-repeat: no-repeat;
+    border: medium none !important;
+    font-size: 1.1em !important;
+    height: 19px !important;
+    margin-left: 10px;
+    padding-top: 0;
+    width: 125px;
+}
+</style>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="all" href="styles/abbcode/abbcode.css?3.0.12" />
+
+
+
+<style type="text/css">.attach-image img { border: 0; }</style>
+
+</head>
+<body id="phpbb" class="section-kb ltr">
+<div id="wrapper">
+<div id="header">
+<div id="account">
+<ul class="leftside">
+<li>Bem-vindo: 18 Mar 2021, 04:18</li>
+</ul>
+<ul class="rightside">
+<li><a href="default.html" title="Registrar">Registrar</a></li>
+<li><a href="default.html" title="Entrar" accesskey="l">Entrar</a></li>
+</ul>
+</div>
+<a href="portal.html" title="Manjaro Brasil">
+<div id="illustration">
+<div id="site-description"><img src="images/manjaro_logo.png" alt="logo">
+<p></p>
+</div>
+</div>
+</a>
+<div class="top_box">
+<h1 class="titulo">Download aqui</h1>
+<div class="bloco">
+<h4><a href=" https://manjaro.org/get-manjaro/" title="Manjaro Linux 17.1.8" target="_blank"><img src="styles/we_clearblue/theme/images/link_icon.png" alt="Manjaro Linux 17.1.8" />&nbsp; Manjaro Linux 17.1.8</a></h4>
+<span class="date">16 ABR 18</span>
+</div>
+</div>
+<center>
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
+<div id="main-navigation">
+<ul id="primary-navigation" class="leftside">
+<li><a href="portal.html" title="Portal">Portal</a></li>
+<li><a href="index.html" title="Fóruns">Fóruns</a></li>
+<li><a href="default.html" title="Regras" style="color: #34495E">Regras</a></li>
+<li><a href="https://webchat.freenode.net/?channels=manjaro-br" target="_blank" title="IRC">IRC</a></li>
+<li><a href="https://pastebin.com/" target="_blank" title="Paste">Paste</a></li>
+<li><a href="kb.html" title="Knowledge Base">Knowledge Base</a></li>
+<li><a href="moonmoon/index.html" target="_blank" title="Manjaro Brasil planet">Manjaro Brasil planet</a></li>
+<li id="searchbox">
+<fieldset>
+<form method="get" action="pesquisar.php">
+<p>
+<input name="q" id="q" type="search" size="40" value="Buscar com Google" onclick="if(this.value=='Buscar com Google')this.value='';" onblur="if(this.value=='')this.value='Buscar com Google';" />
+</p>
+</form>
+</fieldset>
+</li>
+</ul>
+</div>
+</td></tr></tbody>
+</table>
+</center>
+</div>
+<div id="container">
+<table style="width: 100%">
+<tr>
+<td id="left_menu" style="width: 180px; vertical-align: top;">
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Autor <a href="kb.html"><img src="styles/we_clearblue/theme/images/feed.gif" width="14" height="14" alt="Subscrever este autor" title="Subscrever este autor" /></a></div>
+<dl class="user_menu">
+<dt>
+<a href="default.html"><img src="download/g2_1328876875.gif" width="120" height="120" alt="Avatar do usuário" /></a><br />
+<a href="default.html" style="color: #00AAD4;" class="username-coloured">pagani</a>
+</dt>
+<dd>Guru<br /><img src="images/ranks/rank_6.png" alt="Guru" title="Guru" /></dd>
+<dd>&nbsp;</dd>
+<dd><strong>Artigos:</strong> <a href="kb.html" title="Artigos do mesmo autor">11</a></dd><dd><strong>Registro:</strong> 31 Jan 2014, 14:36</dd>
+<dd><strong>Distro utilizada:</strong> manjaro</dd>
+<dd><strong>Versão:</strong> 16.06</dd>
+<dd><strong>Ambiente:</strong> xfce</dd>
+<dd><strong>Repositório:</strong> testing</dd>
+<dd><strong>Habilidade:</strong> Intermediate</dd>
+</dl>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Pesquisar artigos</div>
+<form id="kb_searchform" method="post" action="kb.html?i=search&amp;cat_ids[]=15">
+<fieldset>
+<input name="q" id="kb_keywords" type="text" style="width: 128px" maxlength="128" title="Pesquisar por palavras-chaves" class="inputbox search" value="Pesquisar…" onclick="if(this.value=='Pesquisar…')this.value='';" onblur="if(this.value=='')this.value='Pesquisar…';" />
+<input class="button2" value="Pesquisa" type="submit" /><br />
+</fieldset>
+</form>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Exportar artigo</div>
+<div style="padding-bottom: 3px;" class="user_menu">
+<div><a href="kb.html" title="Exportar para word"><img src="styles/we_clearblue/theme/images/word.jpg" width="14" height="14" alt="Exportar para word" title="Exportar para word" /> Exportar para word</a></div>
+</div>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Compartilhar em</div>
+<div style="padding-bottom: 3px;">
+<div>
+<ul class="linklist">
+</ul>
+<strong></strong>
+<div class="addthis_toolbox">
+<div class="custom_images">
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;amp;s=blogger&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/blogger.png" width="24" height="24" alt="Blogger" title="Blogger " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=delicious&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/delicious.png" width="24" height="24" alt="Delicioso" title="Delicioso " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=digg&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/digg.png" width="24" height="24" alt="Digg" title="Digg " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=facebook&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/facebook.png" width="24" height="24" alt="Facebook" title="Facebook " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=friendfeed&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/friendfeed.png" width="24" height="24" alt="Feed amigo" title="Feed amigo " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=google&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/Google.png" width="24" height="24" alt="Google" title="Google " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=linkedin&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/linkedin.png" width="24" height="24" alt="Linked In" title="Linked In " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=live&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/live.png" width="24" height="24" alt="Live" title="Live " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=mixx&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/mixx.png" width="24" height="24" alt="Mixx" title="Mixx " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=myspace&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/myspace.png" width="24" height="24" alt="MySpace" title="MySpace " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=netvibes&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/netvibes.png" width="24" height="24" alt="Netvibes" title="Netvibes " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=reddit&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/reddit.png" width="24" height="24" alt="Reddit" title="Reddit " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=stumbleupon&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/stumbleupon.png" width="24" height="24" alt="Stumble Upon" title="Stumble Upon " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=technorati&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/technorati.png" width="24" height="24" alt="Technorati" title="Technorati " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=twitter&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/twitter.png" width="24" height="24" alt="Twitter" title="Twitter " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=wordpress&amp;url=kb.html?a=102&amp;title=Capítulo 7. A sintaxe correta nos arquivos de configuração&amp;content=Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm."><img src="styles/we_clearblue/theme/images/social_bookmarking/wordpress.png" width="24" height="24" alt="Wordpress" title="Wordpress " /></a>
+</div>
+</div>
+</div>
+</div>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+</td>
+<td style="vertical-align: top; padding-left: 10px;">&nbsp;
+<div id="a" class="post bg1">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="postbody" style="width: 100%;">
+<ul class="profile-icons">
+<li class="info-icon"><a href="kb.html" title="Ver histórico do artigo"><span>Ver histórico do artigo</span></a></li>
+</ul>
+<h3 class="first"><a href="	">Capítulo 7. A sintaxe correta nos arquivos de configuração</a></h3>
+<strong>ID do artigo:</strong> 102<br />
+<strong>Adaptado por:</strong> <a href="default.html" style="color: #00AAD4;" class="username-coloured">pagani</a><br />
+<strong>Adaptado em:</strong> 02 Abr 2014, 06:18<br />
+ <strong>Descrição do artigo:</strong> Neste capítulo vamos ver a sintaxe correta nos arquivos de configuração do pekwm.<br />
+<div class="content">
+<dl class="codebox">
+<dt>Link externo para este artigo:</dt>
+<dd>
+<code>kb.html?a=102</code>
+</dd>
+</dl>
+</div>
+<hr />
+<div class="pagination">
+</div>
+<div class="content" style="text-align: justify;"><img src="https://www.pekwm.org/images/pekwm_logo.png" alt="Imagem" class="resize_me" /><br /><br />7.1. Sintaxe Básica<br /><br />Todos os arquivos de configuração do pekwm, exceto o arquivo localizado em <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">~/.pekwm/start</code>, segue uma sintaxe comum, como é mostrado no exemplo a seguir.<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># comment<br />// another comment<br />/*<br />&nbsp; &nbsp;yet another comment<br />*/<br /><br />$VARIABLE = &quot;Value&quot;<br />$_ENVIRONMENT_VARIABLE = &quot;Value&quot;<br />INCLUDE = &quot;another_configuration.cfg&quot;<br />COMMAND = &quot;program to execute and add the valid config syntax it outputs here&quot;<br /><br /># Normal format<br />Section = &quot;Name&quot; {<br />&nbsp; &nbsp;Event = &quot;Param&quot; {<br />&nbsp; &nbsp;&nbsp; &nbsp;Actions = &quot;action parameter; action parameter; $VAR $_VARIABLE&quot;<br />&nbsp; &nbsp;}<br />}<br /><br />// Compressed format<br />Section = &quot;Name&quot; { Event = &quot;Param&quot; { Actions = &quot;action parameters; action parameters; $VAR $_VARIABLE&quot; } }</code></dd></dl><br /><br />Normalmente você pode modificar os espaçamentos e quebras de linha, porém essa é a sintaxe “correta”, então a documentação mostrará a maneira certa de se fazer isso.<br /><br />Os “Event” podem ser combinados na mesma linha sendo separados por ponto e vírgula. As “Actions” também podem ser combinadas na mesma linha sendo separadas por ponto e vírgula, já o “INCLUDE” pode ser usando em qualquer lugar do arquivo.<br /><br />Pekwm tem um arquivo chamado vars que serve para definir variáveis comuns entre os arquivos de configuração. Posteriormente esse será o arquivo a ser referenciado em “INCLUDE”.<br /><br />Comentários são permitidos ao longo de todos os arquivos de configuração, entretanto devem ser iniciados com #, ou / / , também podendo vir entre /* e */.<br /><br />7.2. Arquivos modelos<br /><br />O analisador de configurações do pekwm suporta o uso de arquivos modelos para reduzir a digitação. O modelo está atualmente disponível em autopropriedades e arquivos de configuração dos temas. A configuração do modelo não é totalmente compatível com a sintaxe não-modelo e, portanto, requer ativação para não ter problemas com a compatibilidade com versões anteriores. Para habilitar o modelo de análise deve-se iniciar o arquivo de configuração com o seguinte:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>Require {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Templates = true<br />}</code></dd></dl><br /><br />Definir modelos é como criar uma seção comum, porém usa-se o nome especial Define. Abaixo está um exemplo com a definição de um modelo chamado NAME.<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>Define = “NAME” {<br />&nbsp; &nbsp; &nbsp; &nbsp;Section&nbsp; = “Sub” {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ValueSub = “Sub valor”<br />&nbsp; &nbsp; &nbsp; &nbsp;}<br />&nbsp; &nbsp; &nbsp; &nbsp;Value&nbsp; = “Valor”<br />}</code></dd></dl><br /><br />O modelo acima pode ser usado posteriormente, utilizando o caractere @. O exemplo abaixo mostra o uso do modelo NAME em duas seções chamadas Name e NameOverride substituindo um dos valores do modelo.<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>Section = “Name” {<br />&nbsp; &nbsp; @NAME<br />}<br />Section = “NameOverride” {<br />&nbsp; &nbsp; @NAME<br />&nbsp; &nbsp; &nbsp;Value = “valor a ser substituído”</code></dd></dl><br /><br />O exemplo acima é equivalente a escrever o seguinte:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>Section = “Name” {<br />&nbsp; &nbsp; &nbsp; Section = “Sub” {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ValueSub = “Sub Valor”<br />&nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; Value = “Valor”<br />}<br />Section = “Name” {<br />&nbsp; &nbsp; &nbsp; Section = “Sub” {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ValueSub = “Sub Valor”<br />&nbsp; &nbsp; &nbsp; }<br />}</code></dd></dl><br /><br />7.3. Uso das variáveis nos arquivos de configuração do pekwm<br /><br />O pekwm permite que você use, para sua configuração, tanto as variáveis locais ou internas, bem como as variáveis globais do sistema. Variáveis locais ou internas são prefixados com um $, já as variáveis globais são prefixadas com $_.<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># examples of how to set both type of variables<br />$INTERNAL = &quot;this is an internal variable&quot;<br />$_GLOBAL = &quot;this is a global variable&quot;<br /><br /># examples of how to read both type of variables<br />RootMenu = &quot;Menu&quot; {<br />&nbsp; &nbsp;Entry = &quot;$_GLOBAL&quot; { Actions = &quot;xmessage $INTERNAL&quot; }<br />}</code></dd></dl><br /><br />Há uma variável global especial em pekwm chamada de $_PEKWM_CONFIG_FILE. Essa variável global é lida quando pekwm começa e seu conteúdo é usado como arquivo de configuração padrão. Se necessário, essa variável será atualizada para apontar os arquivos de configuração ativos no momento.<br /><br />As variáveis podem ser definidas praticamente em qualquer lugar, mas provavelmente a melhor ideia é colocá-las no inicio do arquivo, fora de quaisquer seções.<br /><br /><span style="font-weight: bold">Localização do original</span><br /><br /><a class="postlink" href="https://www.pekwm.org/files/pekwm/doc/0.1.17/html/config/syntax.html" onclick="window.open(this.href);return false;">http://www.pekwm.org/files/pekwm/doc/0. ... yntax.html</a><br /><br /><span style="font-weight: bold">Modificado por</span><br /><br />- Holmes, 03-04-14, inclusão do texto.<br />- Holmes, 03-04-14, revisão e ajuste do texto.<br /><br /><p><b><font size="1" color="#000000">Conteúdo distribuído sob a licença GNU FDL</font></b></p></div>
+<strong></strong>
+<div class="notice">Este artigo foi <a href="kb.html">editado</a> por <a href="default.html" style="color: #803300;" class="username-coloured">Holmes</a> em 03 Abr 2014, 08:03</div>
+<br />
+</div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+<center>
+<div id="footer">
+<div id="footer-inner">
+<div>
+<p>Produzido por: <a href="https://www.phpbb.com/" onclick="window.open(this.href);return false;">phpBB</a> &reg; Forum Software &copy; phpBB Group</p>
+<p>Produzido por: MOD Knowledge Base &copy; <a href="http://kb.softphp.dk" onclick="window.open(this.href);return false;">Softphp</a><br />Traduzido por: <a href="http://www.suportephpbb.com.br">Suporte phpBB</a><br /><a href="http://www.phpbb-seo.com/" title="Search Engine Optimization"><img src="images/phpbb-seo.png" alt="phpBB SEO" /></a></p>
+<br />
+<p>Hospedagem cedida por: Igor Isaias Banlian</p>
+<p>O Manjaro Brasil usa o estilo desenvolvido por <a href="http://weeb.pl/" onclick="window.open(this.href);return false;">weeb</a> e modificado por Holmes e Freax</p>
+<p>Todo conteúdo do Manjaro Brasil está licenciado pela <a href="https://www.gnu.org/licenses/fdl.html">licença GNU FDL</a></p>
+</div>
+</div>
+<div id="footer-fixed"></div>
+</div>
+</center>
+</div>
+<div>
+<a id="bottom" name="bottom" accesskey="z"></a>
+</div>
+<div id="toTop">^ Voltar ao Topo</div>
+
+</body>
+</html>

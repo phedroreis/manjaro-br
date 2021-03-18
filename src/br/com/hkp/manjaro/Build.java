@@ -341,7 +341,8 @@ public class Build
             /*
             Corrige o script responsavel por abrir uma caixa de dialogo que 
             permite ao usuario digitar o num. da pag. para a qual quer ir. Mas
-            apenas em paginas de subforums e subsecoes.
+            apenas em paginas de subforums e subsecoes. Deleta tambem script 
+            para ordenar lista de topicos
             */
             if (filename.contains("page"))
             {
@@ -359,6 +360,13 @@ public class Build
                             "var seo_static_pagination = 'page';", 
                             "var seo_static_pagination = '" + 
                             sectionName + "page';"        
+                        );
+                    htmlContent = 
+                        htmlContent.replaceAll
+                        (
+                            "<form method=\"post\" action=[^§]+?" + 
+                            "<fieldset class=[^§]+?<\\/form>",
+                            ""
                         );
                 }
             }else if (filename.equals("index.html"))

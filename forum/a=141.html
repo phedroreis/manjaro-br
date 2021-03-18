@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="pt-br" xml:lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="pt-br" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>Manjaro Brasil &bull; Ver artigo - Ruby: usando um ambiente de desenvolvimento no Manjaro</title>
+
+
+
+
+<link href="styles/we_clearblue/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="images/jgrowl/jgrowl_v.css" />
+
+
+
+<link rel="alternate" type="application/atom+xml" title="feeds - Manjaro Brasil" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Notícias" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Todos os fóruns" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Novos tópicos" href="default.html" /><link rel="alternate" type="application/atom+xml" title="feeds - Tópicos ativos" href="default.html" />
+
+
+
+
+
+<style>
+#toTop {
+   width:90px;
+    #border:1px solid #ccc;
+    background:#16a085;
+    text-align:center;
+    padding:5px;
+   position:fixed; /* this is the magic */
+    bottom:10px; /* together with this to put the div at the bottom*/
+    right:14px;
+    cursor:pointer;
+    display:none;
+    color:#fdfdfd;
+    font-family:"Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size:11px;
+}
+
+#main-navigation #searchbox {
+	background: url("styles/we_clearblue/theme/images/navbar_search.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 30px;
+	margin-left: 10px;
+    margin-top: 8px;
+    position: static;
+    width: 150px;
+	border-left: 1px solid transparent;
+}
+
+#main-navigation #searchbox fieldset {
+    border: medium none;
+    padding-top: 6px;
+}
+
+#main-navigation #searchbox input {
+    background-color: transparent !important;
+    background-image: url("styles/we_clearblue/theme/images/search_back.gif");
+    background-repeat: no-repeat;
+    border: medium none !important;
+    font-size: 1.1em !important;
+    height: 19px !important;
+    margin-left: 10px;
+    padding-top: 0;
+    width: 125px;
+}
+</style>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" media="all" href="styles/abbcode/abbcode.css?3.0.12" />
+
+
+
+<style type="text/css">.attach-image img { border: 0; }</style>
+
+</head>
+<body id="phpbb" class="section-kb ltr">
+<div id="wrapper">
+<div id="header">
+<div id="account">
+<ul class="leftside">
+<li>Bem-vindo: 18 Mar 2021, 04:18</li>
+</ul>
+<ul class="rightside">
+<li><a href="default.html" title="Registrar">Registrar</a></li>
+<li><a href="default.html" title="Entrar" accesskey="l">Entrar</a></li>
+</ul>
+</div>
+<a href="portal.html" title="Manjaro Brasil">
+<div id="illustration">
+<div id="site-description"><img src="images/manjaro_logo.png" alt="logo">
+<p></p>
+</div>
+</div>
+</a>
+<div class="top_box">
+<h1 class="titulo">Download aqui</h1>
+<div class="bloco">
+<h4><a href=" https://manjaro.org/get-manjaro/" title="Manjaro Linux 17.1.8" target="_blank"><img src="styles/we_clearblue/theme/images/link_icon.png" alt="Manjaro Linux 17.1.8" />&nbsp; Manjaro Linux 17.1.8</a></h4>
+<span class="date">16 ABR 18</span>
+</div>
+</div>
+<center>
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
+<div id="main-navigation">
+<ul id="primary-navigation" class="leftside">
+<li><a href="portal.html" title="Portal">Portal</a></li>
+<li><a href="index.html" title="Fóruns">Fóruns</a></li>
+<li><a href="default.html" title="Regras" style="color: #34495E">Regras</a></li>
+<li><a href="https://webchat.freenode.net/?channels=manjaro-br" target="_blank" title="IRC">IRC</a></li>
+<li><a href="https://pastebin.com/" target="_blank" title="Paste">Paste</a></li>
+<li><a href="kb.html" title="Knowledge Base">Knowledge Base</a></li>
+<li><a href="moonmoon/index.html" target="_blank" title="Manjaro Brasil planet">Manjaro Brasil planet</a></li>
+<li id="searchbox">
+<fieldset>
+<form method="get" action="pesquisar.php">
+<p>
+<input name="q" id="q" type="search" size="40" value="Buscar com Google" onclick="if(this.value=='Buscar com Google')this.value='';" onblur="if(this.value=='')this.value='Buscar com Google';" />
+</p>
+</form>
+</fieldset>
+</li>
+</ul>
+</div>
+</td></tr></tbody>
+</table>
+</center>
+</div>
+<div id="container">
+<table style="width: 100%">
+<tr>
+<td id="left_menu" style="width: 180px; vertical-align: top;">
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Autor <a href="kb.html"><img src="styles/we_clearblue/theme/images/feed.gif" width="14" height="14" alt="Subscrever este autor" title="Subscrever este autor" /></a></div>
+<dl class="user_menu">
+<dt>
+<a href="default.html"><img src="download/1174_1433831973.png" width="128" height="128" alt="Avatar do usuário" /></a><br />
+<a href="default.html" style="color: #00AAD4;" class="username-coloured">pactux</a>
+</dt>
+<dd>Aprendiz<br /><img src="images/ranks/rank_1.png" alt="Aprendiz" title="Aprendiz" /></dd>
+<dd>&nbsp;</dd>
+<dd><strong>Artigos:</strong> <a href="kb.html" title="Artigos do mesmo autor">5</a></dd><dd><strong>Registro:</strong> 09 Jun 2015, 02:55</dd>
+<dd><strong>Distro utilizada:</strong> Manjaro Linux</dd>
+<dd><strong>Versão:</strong> 17.1.8</dd>
+<dd><strong>Ambiente:</strong> Gnome</dd>
+<dd><strong>Repositório:</strong> Stable</dd>
+<dd><strong>Habilidade:</strong> Novice</dd>
+</dl>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Pesquisar artigos</div>
+<form id="kb_searchform" method="post" action="kb.html?i=search&amp;cat_ids[]=8">
+<fieldset>
+<input name="q" id="kb_keywords" type="text" style="width: 128px" maxlength="128" title="Pesquisar por palavras-chaves" class="inputbox search" value="Pesquisar…" onclick="if(this.value=='Pesquisar…')this.value='';" onblur="if(this.value=='')this.value='Pesquisar…';" />
+<input class="button2" value="Pesquisa" type="submit" /><br />
+</fieldset>
+</form>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Exportar artigo</div>
+<div style="padding-bottom: 3px;" class="user_menu">
+<div><a href="kb.html" title="Exportar para word"><img src="styles/we_clearblue/theme/images/word.jpg" width="14" height="14" alt="Exportar para word" title="Exportar para word" /> Exportar para word</a></div>
+</div>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+<div class="post bg4">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="left_menu_title">Compartilhar em</div>
+<div style="padding-bottom: 3px;">
+<div>
+<ul class="linklist">
+</ul>
+<strong></strong>
+<div class="addthis_toolbox">
+<div class="custom_images">
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;amp;s=blogger&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/blogger.png" width="24" height="24" alt="Blogger" title="Blogger " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=delicious&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/delicious.png" width="24" height="24" alt="Delicioso" title="Delicioso " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=digg&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/digg.png" width="24" height="24" alt="Digg" title="Digg " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=facebook&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/facebook.png" width="24" height="24" alt="Facebook" title="Facebook " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=friendfeed&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/friendfeed.png" width="24" height="24" alt="Feed amigo" title="Feed amigo " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=google&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/Google.png" width="24" height="24" alt="Google" title="Google " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=linkedin&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/linkedin.png" width="24" height="24" alt="Linked In" title="Linked In " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=live&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/live.png" width="24" height="24" alt="Live" title="Live " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=mixx&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/mixx.png" width="24" height="24" alt="Mixx" title="Mixx " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=myspace&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/myspace.png" width="24" height="24" alt="MySpace" title="MySpace " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=netvibes&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/netvibes.png" width="24" height="24" alt="Netvibes" title="Netvibes " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=reddit&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/reddit.png" width="24" height="24" alt="Reddit" title="Reddit " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=stumbleupon&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/stumbleupon.png" width="24" height="24" alt="Stumble Upon" title="Stumble Upon " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=technorati&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/technorati.png" width="24" height="24" alt="Technorati" title="Technorati " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=twitter&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/twitter.png" width="24" height="24" alt="Twitter" title="Twitter " /></a>
+<a href="https://www.addthis.com/bookmark.php?pub=&amp;v=250&amp;source=men-250&amp;s=wordpress&amp;url=kb.html?a=141&amp;title=Ruby: usando um ambiente de desenvolvimento no Manjaro&amp;content=Criar um ambiente minimamente funcional no Manjaro Linux."><img src="styles/we_clearblue/theme/images/social_bookmarking/wordpress.png" width="24" height="24" alt="Wordpress" title="Wordpress " /></a>
+</div>
+</div>
+</div>
+</div>
+<span class="corners-bottom"><span></span></span>
+</div>
+</div>
+</td>
+<td style="vertical-align: top; padding-left: 10px;">&nbsp;
+<div id="a" class="post bg1">
+<div class="inner">
+<span class="corners-top"><span></span></span>
+<div class="postbody" style="width: 100%;">
+<ul class="profile-icons">
+<li class="info-icon"><a href="kb.html" title="Ver histórico do artigo"><span>Ver histórico do artigo</span></a></li>
+</ul>
+<h3 class="first"><a href="	">Ruby: usando um ambiente de desenvolvimento no Manjaro</a></h3>
+<strong>ID do artigo:</strong> 141<br />
+<strong>Adaptado por:</strong> <a href="default.html" style="color: #00AAD4;" class="username-coloured">pactux</a><br />
+<strong>Adaptado em:</strong> 22 Jul 2016, 17:22<br />
+<strong>Descrição do artigo:</strong> Criar um ambiente minimamente funcional no Manjaro Linux.<br />
+<div class="content">
+<dl class="codebox">
+<dt>Link externo para este artigo:</dt>
+<dd>
+<code>kb.html?a=141</code>
+</dd>
+</dl>
+</div>
+<hr />
+<div class="pagination">
+</div>
+<div class="content" style="text-align: justify;"><img src="http://www.auplod.com/u/pluoad82f12.png" alt="Imagem" class="resize_me" /><br /><br />Há pouco tempo atrás me perguntaram sobre a linguagem de programação Ruby (forma de aprendizagem) e se era possível trabalhar com ela no Manjaro (qual o processo instalação, ferramentas, etc). E pensando nisso resolvi escrever esse texto, pois essa também pode ser a dúvida de outras pessoas.<br /><br />A principio não vou ensinar Ruby, mas apenas mostrar a criação de um ambiente minimamente funcional para que os interessados possam começar os estudos da linguagem sobre a plataforma <span style="text-decoration: underline">Manjaro Linux</span>.<br /><br />O conteúdo está dividido em cinco partes:<br /><br />- O que é Ruby (breve resumo);<br />- Instalação;<br />- Editores de texto;<br />- Hello world!;<br />- RubyGems<br /><br />Sem mais delongas, vamos ao assunto.<br /><br /><span style="font-weight: bold">O que é Ruby? (breve resumo)</span><br /><br />Ruby foi criado por <span style="text-decoration: underline">Yukihiro Matsumoto</span> em meados de 1995, pertence ao conjunto de linguagens de programação de tipo interpretada, é orientado a objetos, possuí tipagem dinâmica/forte e também conta com um Garbage collector.<br /><br />Ruby se destaca pela sintaxe agradável e possui uma comunidade muito forte (inclusive no Brasil). E como toda grande <br />linguagem, ele também conta com frameworks para agilizar o processo de desenvolvimento, como o Sinatra e o Ruby on Rails por exemplo.<br /><br />Você pode uilizar Ruby para diversas tarefas, seja no Gerenciamento de servidores e sistemas, processamento de <br />arquivos, criação de aplicações web, etc.<br /><br /><span style="font-weight: bold">Instalação</span><br /><br />Agora que já sabemos do que se trata, vamos a instalação. Abra o terminal e digite:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># pacman -Syu</code></dd></dl><br />ou<br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ pamac update --force-refresh</code></dd></dl><br /><br />Esse comando serve para sincronizar os repositórios antes do sistema trabalhar com os pacotes. Em seguida, vejamos se o pacote que desejamos existe para ser instalado:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># pacman -Ss ruby</code></dd></dl><br /><br />ou<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ pamac search ruby</code></dd></dl><br /><br />Ainda no terminal, digite a instrução abaixo para instalar:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># pacman -S ruby</code></dd></dl><br />ou<br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ pamac install ruby</code></dd></dl><br /><br />Após a instalação, confira se o processo ocorreu com sucesso através do comando:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># ruby -v</code></dd></dl><br /><br />Se os pacotes foram instalados com sucesso, a resposta será a versão do ruby presente no sistema.<br /><br /><span style="font-weight: bold">Editores de texto</span><br /><br />De nada vale uma grande linguagem de programação instalada, se não houver um bom editor de textos para manipula-la, em uma analogia, é como executar uma boa música em um simples rádio de pilhas (nada contra essa tecnologia).<br /><br />Tendo isso mente, proponho a utilização de alguns editores de texto que são muito bons para escrever em Ruby. Abaixo fiz uma breve lista com os mesmos junto com dicas rápidas, como instalação e configuração para que funcionem com essa linguagem:<br /><br /><span style="font-weight: bold">- Sublime Text</span><br /><br />Eu costumo chama-lo de &quot;Editor de tudo&quot;, pois essa ferramenta suporta diversas linguagens de programação, como C, C++, [...] e Ruby é claro!<br /><br />Para instalar, abra o terminal e escreva:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ pamac build sublime-text-dev</code></dd></dl><br /><br /><span style="font-weight: bold">- Bluefish Editor</span><br /><br />Outro que chamo de &quot;Editor de tudo&quot; pela capacidade em fornecer suporte a diversas linguagens de programação, inclusive <br />Ruby. O Holmes já havia falado dele <a href="-t1113.html" onclick="window.open(this.href);return false;" class="postlink">nesse post</a>.<br /><br />Para instalar, abra o terminal e escreva:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># pacman -S bluefish</code></dd></dl><br />ou<br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ pamac install bluefish</code></dd></dl><br /><br /><span style="font-weight: bold">- Vim</span><br /><br />Impossível falar de editores de texto e programação em plataforma GNU/Linux sem ao menos citar a palavra <span style="font-weight: bold">'Vim'</span>. E por esse motivo deixo-o como opção para vocês.<br /><br />Para instalar, volte ao terminal e escreva:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># pacman -S vim</code></dd></dl><br />ou<br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ pamac install vim</code></dd></dl><br /><br />Se você não conhece essa espetacular ferramenta e deseja saber um pouco sobre, leia <a href="-t3046.html" onclick="window.open(this.href);return false;" class="postlink">esse texto</a> e <a href="-t3195.html" onclick="window.open(this.href);return false;" class="postlink">esse aqui</a> também.<br /><br />Por padrão, o Vim &quot;não suporta&quot; a sintaxe Ruby, e por isso vamos configura-lo para isso.<br /><br /><span style="font-weight: bold">Obs:</span> O Vim suporta Ruby sim, o que quero dizer é que coisas como o auto-complete não vem habilitado por default.<br /><br />Para ativar esses detalhes, abra o arquivo de configuração do editor (pode ser com o próprio Vim).<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code># vim /etc/vimrc</code></dd></dl><br /><br />No final do arquivo insira as linhas abaixo:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>&quot; Ruby<br />autocmd Filetype ruby,eruby let g:rubycomplete_buffer_loading = 1<br />autocmd Filetype ruby,eruby let g:rubycomplete_classes_in_global = 1<br />autocmd Filetype ruby,eruby let g:rubycomplete_rails = 1<br /></code></dd></dl><br /><br />Para que a sintaxe seja auto completada, basta utilizar os atalhos <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">Ctrl + x</code> e <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">Ctrl + o</code> quando estiver digitando.<br /><br />Deixo claro nessa seção que os editores de texto mencionados acima são de MINHA preferência, isso quer dizer que você é livre para escolher aquele que mais lhe agrada, esteja ele na lista ou não.<br /><br /><span style="font-weight: bold">Hello world!</span><br /><br />Vamos escrever nosso primeiro código em Ruby? Pois bem, abra o editor de texto de sua preferência e escreva:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>puts &quot;Hello world!&quot;</code></dd></dl><br /><br />Em seguida salve o arquivo com o nome que desejar (levando em consideração que a extensão do mesmo deve ser <span style="font-weight: bold">.rb</span>, como por exemplo hello.rb), vá ao terminal e escreva <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">ruby arquivo.rb</code>.<br /><br />Ou se você quiser fazer algo mais legal:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>texto = &quot;Isso é Ruby&quot;<br /><br />if texto.length == 10<br />&nbsp; &nbsp;puts &quot;Hello world!&quot;<br />else<br />&nbsp; &nbsp;puts texto.upcase<br />end<br /></code></dd></dl><br /><br />Só nesse pequeno trecho acima é possível ver e ter uma breve noção de <span style="font-weight: bold">variaveis</span>, <span style="font-weight: bold">estruturas de decisão</span> / <span style="font-weight: bold">comparação</span> e <span style="font-weight: bold">invocação de métodos</span>. ;)<br /><br />Outra forma de interação com o Ruby é através de uma ferramenta chamada <span style="font-weight: bold">irb</span> que é nativa da linguagem. Abra o terminal e digite: <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #e67e22; display: inline;">$ irb</code>. Você será direcionado para um &quot;terminal Ruby&quot; na qual é possível testar comandos. Quer testar? Digite dentro do <span style="font-weight: bold">irb</span>:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>irb(main):*:0&gt; &quot;ruby&quot;<br />irb(main):*:0&gt; 4*4<br />irb(main):*:0&gt; &quot;string&quot;.capitalize<br />irb(main):*:0&gt; quit<br /></code></dd></dl><br /><br /><span style="font-weight: bold">RubyGems</span><br /><br />Nesse ultimo tópico, deixo uma breve introdução sobre a ferramenta RubyGems. Ela nada mais é do que um simples mas poderoso gerenciador de pacotes. Guardadas as devidas proporções, pense nela como um <span style="font-weight: bold">pacman</span> ou <span style="font-weight: bold">yaourt</span> para Ruby.<br /><br /><span style="font-weight: bold">Obs:</span> Importante frisar que um pacote a ser manipulado nesse gerenciador chama-se <span style="font-weight: bold">gem</span>.<br /><br /><span style="font-weight: bold">- Exemplo de utilização</span><br /><br />Digamos que você esteja desenvolvendo alguma ferramenta de automatização para sua máquina e essa ferramenta precisa guardar informações em uma base dados local, como o <span style="font-weight: bold">SQLite3</span> por exemplo. Se você tentar fazer a conexão, o Ruby retornará um erro e lhe informará que a <span style="font-weight: bold">gem</span> responsável pela conexão não está instalada. O que fazemos nesse caso? Instalamos...<br /><br />Quando disse que o RubyGems age como o <span style="font-weight: bold">pacman</span>, não estava brincando. Vamos instalar a gem responsável pelas <br />conexões do SQLite3 e você verá sobre o que estou falando...<br /><br />Abra o terminal e digite:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ gem install sqlite3</code></dd></dl><br /><br />Parecido, não?<br /><br />Para listar todas as gems instaladas:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ gem list</code></dd></dl><br /><br />Para atualizar todas as gems instaladas:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ gem update</code></dd></dl><br /><br />Para ver a lista completa de comandos:<br /><br /><dl class="codebox"><dt>Código: <a href="#" onclick="selectCode(this); return false;">Selecionar todos</a></dt><dd><code>$ gem help commands</code></dd></dl><br /><br />Para mais informações a respeito dessa ótima ferramenta, acesse a página oficial do projeto: <a href="https://rubygems.org/" onclick="window.open(this.href);return false;" class="postlink">https://rubygems.org/</a><br /><br /><span style="font-weight: bold">Referência</span><br /><br />Os créditos por este texto são para pactux.<br /><br /><span style="font-weight: bold">Mudanças</span><br /><br />- Holmes, 22/07/2016, inserção do texto.<br />- Holmes, 22/07/2016, ajustes pontuais.<br /><br /><p><b><font size="1" color="#000000">Conteúdo distribuído sob a licença GNU FDL</font></b></p></div>
+<strong></strong>
+<div class="notice">Este artigo foi <a href="kb.html">editado</a> por <a href="default.html" style="color: #00AAD4;" class="username-coloured">tioguda</a> em 31 Ago 2020, 21:06<br />Razão: Atualizar os comandos de instalação dos pacotes</div>
+<br />
+<div id="sig" class="signature"><strong>Tags:</strong> <a href="kb.html">ruby</a>, <a href="kb.html">programação</a>, <a href="kb.html">ambiente</a></div>
+</div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<hr />
+</td>
+</tr>
+</table>
+</div>
+<center>
+<div id="footer">
+<div id="footer-inner">
+<div>
+<p>Produzido por: <a href="https://www.phpbb.com/" onclick="window.open(this.href);return false;">phpBB</a> &reg; Forum Software &copy; phpBB Group</p>
+<p>Produzido por: MOD Knowledge Base &copy; <a href="http://kb.softphp.dk" onclick="window.open(this.href);return false;">Softphp</a><br />Traduzido por: <a href="http://www.suportephpbb.com.br">Suporte phpBB</a><br /><a href="http://www.phpbb-seo.com/" title="Search Engine Optimization"><img src="images/phpbb-seo.png" alt="phpBB SEO" /></a></p>
+<br />
+<p>Hospedagem cedida por: Igor Isaias Banlian</p>
+<p>O Manjaro Brasil usa o estilo desenvolvido por <a href="http://weeb.pl/" onclick="window.open(this.href);return false;">weeb</a> e modificado por Holmes e Freax</p>
+<p>Todo conteúdo do Manjaro Brasil está licenciado pela <a href="https://www.gnu.org/licenses/fdl.html">licença GNU FDL</a></p>
+</div>
+</div>
+<div id="footer-fixed"></div>
+</div>
+</center>
+</div>
+<div>
+<a id="bottom" name="bottom" accesskey="z"></a>
+</div>
+<div id="toTop">^ Voltar ao Topo</div>
+
+</body>
+</html>

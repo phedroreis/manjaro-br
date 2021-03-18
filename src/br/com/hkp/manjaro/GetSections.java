@@ -15,6 +15,7 @@ import static br.com.hkp.manjaro.Util.extractFilenameFromUrl;
 import static br.com.hkp.manjaro.Util.setTerminalColors;
 import static br.com.hkp.manjaro.Util.showOpenMessage;
 import static br.com.hkp.manjaro.Util.systemErrPrintln;
+import static br.com.hkp.manjaro.Util.writeTextFile;
 import java.io.File;
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -113,8 +114,22 @@ public class GetSections
             if(!downloadUrlMakingDirs("moonmoon/index.php")) 
                 throw new IOException("Download fail: moonmoon/index.php");
             
+            File moonmoonIndex = 
+                new File(DOWNLOAD_DIR + "/moonmoon/index.html");
+            
             new File(DOWNLOAD_DIR + "/moonmoon/index.php").
-            renameTo(new File(DOWNLOAD_DIR + "/moonmoon/index.html"));
+            renameTo(moonmoonIndex);
+            
+            String fileContent = readTextFile(moonmoonIndex);
+            
+            fileContent = 
+                fileContent.replace
+                (
+                    "href=\"./index.php\"",
+                    "href=\"./index.html\""
+                );
+            
+            writeTextFile(moonmoonIndex, fileContent);
            
             System.out.println(PREFIX + "moonmoon/index.php");
             
