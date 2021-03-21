@@ -1,6 +1,7 @@
 package br.com.hkp.manjaro;
 
 import static br.com.hkp.manjaro.Util.DOWNLOAD_DIR;
+import static br.com.hkp.manjaro.Util.PREFIX;
 import static br.com.hkp.manjaro.Util.readTextFile;
 import static br.com.hkp.manjaro.Util.systemErrPrintln;
 import static br.com.hkp.manjaro.Util.writeTextFile;
@@ -30,6 +31,13 @@ public final class BugFix
     
     private static final String TARGET_LINK =
         "<a href=\"default.html\" style=\"color: #FF0000\">[Resolvido]</a></h2>";
+    
+    /*
+    Serve para editar o nome do arquivo que eh apresentado na pagina para ser 
+    utilizado com um link externo para este artigo.
+    */
+    private static final Pattern EXTERNAL_LINK = 
+            Pattern.compile("<code>kb.html\\?a=(\\d+)<\\/code>");
     
     /*[01]---------------------------------------------------------------------
  
@@ -92,6 +100,31 @@ public final class BugFix
             
         }//for
         
+        fileList = downloadDir.listFiles(new ArticleFilter());
+        
+        for(File articleFile: fileList)
+        {
+            System.out.println("Corrigindo: " + articleFile.getName());
+            
+            String content = readTextFile(articleFile);
+            /*
+            Ajusta o nome do arquivo para ser usado como link externo para o 
+            artigo
+            */
+            Matcher m = EXTERNAL_LINK.matcher(content);
+            
+            if (m.find())
+                content = 
+                    content.replace
+                    (
+                        m.group(), "<code>" + PREFIX + "a=" + m.group(1) +
+                        ".html</code>"
+                    );
+            
+            writeTextFile(articleFile, content);
+            
+        }//for
+        
     }//fix()
     
     /*[02]---------------------------------------------------------------------
@@ -147,5 +180,18 @@ public final class BugFix
            return filename.contains(TOPIC_NAME);
         }
     }//classe TopicFilter
+    
+    /***************************************************************************
+    *    Classe interna. Um filtro que seleciona arquivos HTML com paginas
+    *    de artigos.
+    **************************************************************************/
+    private static final class ArticleFilter implements FilenameFilter
+    {
+        @Override
+        public boolean accept(File dir, String filename)
+        {
+           return filename.contains("a=");
+        }
+    }//classe ArticleFilter
    
 }//classe BugFix

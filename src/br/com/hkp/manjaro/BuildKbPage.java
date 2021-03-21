@@ -36,7 +36,7 @@ public final class BuildKbPage
     utilizado com um link externo para este artigo.
     */
     private static final Pattern EXTERNAL_LINK = 
-            Pattern.compile("<code>kb.html?a=(\\d+)</code>");
+            Pattern.compile("<code>kb.html\\?a=(\\d+)<\\/code>");
     
     /*
     Par key/value <nomeDoArtigo/ArquivoDoArtigo>
@@ -86,7 +86,7 @@ public final class BuildKbPage
                 content = 
                     content.replace
                     (
-                        m.group(), "<<code>a=" + m.group(1) + ".html</code>"
+                        m.group(), "<code>a=" + m.group(1) + ".html</code>"
                     );
             
             m = ARTICLE.matcher(content);
