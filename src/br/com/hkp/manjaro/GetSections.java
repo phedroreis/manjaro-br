@@ -28,7 +28,7 @@ import java.util.regex.Pattern;
  * @version 1.0
  * @author "Pedro Reis"
  *****************************************************************************/
-public class GetSections
+public final class GetSections
 {
     /*
     Regexp para localizar paginas de secao

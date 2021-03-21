@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * @version 1.0
  * @author "Pedro Reis"
  *****************************************************************************/
-public class BuildKbPage
+public final class BuildKbPage
 {
     /*
     Localiza o nome do artigo
@@ -32,7 +32,7 @@ public class BuildKbPage
     private static final String SCRIPT =  "<script [^§]+?<\\/script>";
     
     /*
-    Serve para editar o nome do arquivo que eh apresentado na paginapara ser 
+    Serve para editar o nome do arquivo que eh apresentado na pagina para ser 
     utilizado com um link externo para este artigo.
     */
     private static final Pattern EXTERNAL_LINK = 
@@ -60,7 +60,7 @@ public class BuildKbPage
             
             String content = readTextFile(htmlFile);
             /*
-            Corrije um erro que faz aparecer o logo Manjaro 2 vezes na pagina
+            Corrige um erro que faz aparecer o logo Manjaro 2 vezes na pagina
             */
             content =
                 content.replace

@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * @version 1.0
  * @author "Pedro Reis"
  *****************************************************************************/
-public class GetFiles
+public final class GetFiles
 {
     private static final HashSet<String> DOWNLOADEDS_URLS = new HashSet<>();
     

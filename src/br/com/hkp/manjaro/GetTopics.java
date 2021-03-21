@@ -20,7 +20,7 @@ import java.io.IOException;
  * @version 1.0
  * @author "Pedro Reis"
  *****************************************************************************/
-public class GetTopics
+public final class GetTopics
 {
     /*[01]---------------------------------------------------------------------
           Baixa todos os HTMLs de paginas de topicos do forum Manjaro-linux

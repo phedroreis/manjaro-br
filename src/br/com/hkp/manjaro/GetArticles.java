@@ -16,7 +16,7 @@ import java.io.IOException;
  * @version 1.0
  * @author "Pedro Reis"
  *****************************************************************************/
-public class GetArticles
+public final class GetArticles
 {
     /*[01]---------------------------------------------------------------------
                         Baixa todos os HTMLs de artigos

@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
  * @version 1.0
  * @author "Pedro Reis"
  *****************************************************************************/
-public class Build
+public final class Build
 {
     /*-----------------------------------------------------------------------*
     As expressoes regulares localizam padroes de strings nos arquivos HTML das

@@ -377,7 +377,7 @@ public final class Util
      * 
      * @param err Mensagem de erro
      */
-    public static void systemErrPrint(String err)
+    public static void systemErrPrint(final String err)
     {
         System.err.print(red + err + defaultColor);
     }//systemErrPrint()
@@ -391,7 +391,7 @@ public final class Util
      * 
      * @param err Mensagem de erro
      */
-    public static void systemErrPrintln(String err)
+    public static void systemErrPrintln(final String err)
     {
         System.err.println(red + err + defaultColor);
     }//SystemErrPrintln()
@@ -510,11 +510,6 @@ public final class Util
             return filename.endsWith(".html");
         }//accetp()
     }//classe HtmlFilter
-    
-    public static void main(String[] args)
-    {
-        showOpenMessage("getTopicsMsg.txt");
-    }
     
  }//classe Util
 

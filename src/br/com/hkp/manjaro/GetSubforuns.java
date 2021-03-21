@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
  * @version 1.0
  * @author "Pedro Reis"
  *****************************************************************************/
-public class GetSubforuns
+public final class GetSubforuns
 {
     /*
     Regexp para localizar url de paginas dos subforuns
