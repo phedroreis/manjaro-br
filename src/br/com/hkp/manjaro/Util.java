@@ -63,7 +63,7 @@ public final class Util
      * 
      * @param contentFile Todo o conteudo do arquivo.
      * 
-     * @return true se o metodo conseguiu decodificar o numero de paginas.
+     * @return o numero de paginas.
      * 
      * @throws BadFileFormatException Se o metodo falhou em decodificar o 
      * numero de paginas daquele topico ou subsecao.
@@ -508,7 +508,7 @@ public final class Util
         public boolean accept(File dir, String filename)
         {
             return filename.endsWith(".html");
-        }//accetp()
+        }//accept()
     }//classe HtmlFilter
     
  }//classe Util
