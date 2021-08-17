@@ -1,4 +1,5 @@
-# manjaro-br
+manjaro-br
+==========
 
 Projeto para desenvolver uma ferramenta para construir a cópia estática do Fórum [Manjaro Brasil](www.manjaro-linux.com.br).
 
@@ -20,13 +21,13 @@ Todos os programas listados foram projetados para serem executados pelo e em um 
 
 Para executar qualquer destes programas apenas use o comando:
 
-java -jar <nomeDoPrograma.jar>
+<kbd><code>**$ java -jar <nomeDoPrograma.jar>**</code></kbd>
 
 Obs: Estes programas podem ser executados em qualquer versão ou distruibuição linux, 32 ou 64 bits, e também em sistemas MacOS. Porém, devido à particularidades na forma como é permitido nomear arquivos e diretórios em sistemas Windows, alguns destes programas podem não produzir o resultado esperado quando executados em plataformas Microsoft.
 
 ### Instruções
 
-Apenas copie os arquivos listados para qualquer diretório, abra um terminal neste diretório e execute o programa com java -jar <nomeDoPrograma.jar>
+Apenas copie os arquivos listados para qualquer diretório, abra um terminal neste diretório e execute o programa com <kbd><code>**$ java -jar <nomeDoPrograma.jar>**</code></kbd>
 
 Para que uma cópia estática do Manjaro-BR seja produzida ao final do processo, é obrigatório que os programas sejam executados **exatamente** na ordem indicada a seguir:
 
@@ -42,9 +43,9 @@ Para que uma cópia estática do Manjaro-BR seja produzida ao final do processo,
 
 Este deve ser o primeiro programa a ser executado e irá baixar todos os arquivos HTML referentes à páginas de tópicos. Se ainda não existir, o programa irá criar no diretório onde estiver sendo executado, um subdiretório de nome manjaro-linux.com.br, onde será construída a cópia estática do Manjaro-BR.
 
-Dependendo da conexão este processo pode levar cerca de uma hora. É normal que ele exiba a mensagem de erro "_File not Found_" quando estiver tentando baixar um tópico que o programa presuma que exista. Não há problema nisso, apenas deixe seguir o download.
+Dependendo da conexão este processo pode levar cerca de uma hora. É normal que ele exiba a mensagem de erro <samp>File not Found</samp> quando estiver tentando baixar um tópico que o programa presuma que exista. Não há problema nisso, apenas deixe seguir o download.
 
-A mensagem de erro "_Bad File_" também irá aparecer eventualmente. Apenas significa que ele tentou baixar um tópico reservado, o qual era preciso ser um usuário registrado para obter acesso.
+  A mensagem de erro <samp>Bad File</samp> também irá aparecer eventualmente. Apenas significa que ele tentou baixar um tópico reservado, o qual era preciso ser um usuário registrado para obter acesso.
 
 No entanto se ocorrer algum erro de IO no download ou na gravação do arquivo, o programa irá repetir a operação 3 vezes e se não houver sucesso solicitará que o usuário decida tentar novamente ou abortar o download daquele arquivo.
 
@@ -54,13 +55,13 @@ Mas observe que este programa numera **cada tópico** e segue uma ordem numéric
 
 Para isso, quando reiniciar o programa, apenas use na linha de comando:
 
-**java -jar GetTopics.jar [numDoTópico]**
+  <kbd><code>**$ java -jar GetTopics.jar [numDoTópico]**</code></kbd>
 
 Por exemplo:
 
 Se o download falhou ao tentar baixar o tópico 3251, na próxima vez rode com java -jar GetTopics.jar 3251
 
-Lembrando que isto **NÃO SE APLICA** quando mensagens de erro File Not Found ou Bad File forem emitidas. Nestas situações deve-se permitir ao programa continuar.
+  Lembrando que isto **NÃO SE APLICA** quando mensagens de erro <samp>File Not Found</samp> ou <samp>Bad File</samp> forem emitidas. Nestas situações deve-se permitir ao programa continuar.
 
 GetTopics, por padrão, inicia tentando baixar o tópico 540 e prossegue até o tópico 6400. Porém muitos destes tópicos não existirão ou podem ser reservados e não acessíveis. Não há erro nisso, apenas deixe prosseguir até o final.
 
@@ -98,13 +99,13 @@ Não tem importância, no caso de falha no download de alguns arquivos pelo GetF
 
 Agora que você tem todos os arquivos, é hora de construir a cópia estática editando os HTMLs que foram baixados. Essa é a tarefa do Build.jar.
 
-Apenas digite java -jar Build.jar e deixe o programa fazer seu trabalho.
+  Apenas digite <kbd><code>**$ java -jar Build.jar**</code></kbd> e deixe o programa fazer seu trabalho.
 
 ##### BuildKbPage.jar
 
 Estamos quase lá! Agora falta construir a página que lista os links para os artigos do Knowledege Base.
 
-Execute java -jar BuildKdPage.jar
+Execute <kbd><code>**$ java -jar BuildKdPage.jar**</code></kbd>
 
 ### Um Último Procedimento
 
@@ -126,14 +127,14 @@ Na maioria das distribuições Linux o OpenJDK é instalado por padrão. Mas pod
 
 Nesse caso tente atualizar seu OpenJDK e se o problema persistir será necessário obter o Oracle JDK. Não sei como fazer isso no Manjaro, mas em sistemas da família Debian os passos são:
 
-**$ sudo add-apt -repository ppa:linuxuprising/java**
+<kbd>**$ sudo add-apt -repository ppa:linuxuprising/java**</kbd>
   
-**$ sudo apt update**
+<kbd>**$ sudo apt update**</kbd>
 
-**$ sudo apt install oracle-java15-installer** 
+<kbd>**$ sudo apt install oracle-java15-installer**</kbd> 
+
 
 E se quiser, depois disso, pode desinstalar o OpenJDK.
 
-**$ sudo apt-get remove --purge openjdk-***
-
+<kbd>**$ sudo apt-get remove --purge openjdk-***</kbd>
 
